@@ -15,6 +15,7 @@
 .logo
   color: $primary
   text-transform: uppercase
+  font-family: 'Futura Demi', cursive
 
 .nav
   &__item
@@ -28,6 +29,10 @@
 
 .phone
   color: $primary
+  font-family: 'Futura Demi', cursive
+  transition: color 0.2s
+  &:hover
+    color: lighten($primary, 10%)
 
 .contacts
   &__phone

@@ -5,6 +5,7 @@
   border: none
   border-radius: 2px
   text-transform: uppercase
+  font-family: 'Futura Demi', cursive
   &:hover
     cursor: pointer
   &--primary
@@ -12,16 +13,21 @@
    color: $light
    box-shadow: 0px 5px 15px rgba($primary, 0.2)
    transition: box-shadow 0.3s
+   transition: background-color 0.3s
    &:hover
      box-shadow: none
+     background-color: darken($primary, 10%)
   &--outline
     border: 1px solid $light
     background-color: transparent
     color: $light
     box-shadow: 0px 5px 15px rgba($light, 0.2)
     transition: box-shadow 0.3s
+    transition: border-color 0.3s
     &:hover
       box-shadow: none
+      border-color: $primary
+
       
 
     
