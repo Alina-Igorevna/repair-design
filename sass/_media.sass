@@ -4,6 +4,16 @@
   .nav
     &__item
       margin-right: 1rem
+@media screen and ( min-width: 1400px)
+  .container
+    width: 86%
+  .instagram__link
+    margin-left: 1.5rem
+    margin-top: 5.9rem
+
+@media screen and ( max-width: 1300px)
+  html
+    font-size: 12px      
 
 @media screen and ( max-width: 992px)
   .nav
@@ -14,7 +24,9 @@
     &__content
       margin-left: 0  
   
-  @media screen and ( max-width: 570px)
+  @media screen and ( max-width: 576px)
+    .container
+      width: 90%
     .contacts
       &__phone
         margin-right: 0
@@ -23,19 +35,29 @@
       &__button
         display: none
     .title
-      font-size: 1.64rem
+      font-size: 2rem
+      max-width: 22.86rem
     .hero
       &__sсroll-down
         display: none
       &__content
-        max-width: 22.86rem
+        // display: flex
+        // flex-wrap: wrap
+        // max-width: 22.86rem
+        margin-left: 0
       &__text
-        font-size: 1.29rem
-        margin-bottom: 2.28rem    
+        font-size: 1.5rem
+        margin-bottom: 2.94rem
+        max-width: 26.5rem  
+        line-height: 2rem
       &__button
-        display: block
-        min-width: 22.86rem
+        // display: block
+        // justify-content: center
+        min-width: 100%
         margin-bottom: 1.85rem
+        padding: 20px
+        
+        
 
 @media screen and ( max-height: 520px)
   .hero
