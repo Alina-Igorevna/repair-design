@@ -484,7 +484,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #131313; }
+  background-color: #131313;
+  font-size: 1.1rem; }
   .instagram__link {
     display: flex;
     align-items: center;
@@ -496,8 +497,7 @@ body {
     line-height: 0.8;
     transition: color 0.2s; }
     .instagram__link:hover {
-      color: #ecce9e;
-      font-size: 1.1rem; }
+      color: #ecce9e; }
     .instagram__link::after {
       content: '';
       width: 50px;
