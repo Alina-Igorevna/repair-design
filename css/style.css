@@ -586,7 +586,7 @@ body {
 }
 
 .hero__instagram {
-  max-width: 6.53rem;
+  max-width: 6rem;
   height: 100%;
 }
 
@@ -703,7 +703,7 @@ body {
   }
 }
 
-@media screen and (max-width: 99px) {
+@media screen and (max-width: 991px) {
   .nav {
     display: none;
   }
@@ -715,7 +715,7 @@ body {
   }
 }
 
-@media screen and (max-width: 99px) and (max-width: 576px) {
+@media screen and (max-width: 991px) and (max-width: 576px) {
   .container {
     width: 90%;
   }
