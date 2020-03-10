@@ -731,8 +731,8 @@ body {
     display: none;
   }
   .title {
-    font-size: 1.64rem;
-    line-height: 1.6;
+    font-size: 1.91rem;
+    line-height: 1.4;
     max-width: 22.86rem;
   }
   .hero__sсroll-down {
@@ -750,7 +750,7 @@ body {
     line-height: 2rem;
   }
   .hero__button {
-    min-width: 97%;
+    min-width: 98%;
     margin-bottom: 1.85rem;
     padding: 20px;
     font-size: 13px;
