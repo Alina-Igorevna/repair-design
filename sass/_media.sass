@@ -25,25 +25,27 @@
       display: none
     &__content
       margin-left: 0 
-  .card
-    &__text
-      &--types
-        max-height: 22rem
-        
-
-@media screen and ( max-width: 760px)
- .row
+  .row
     flex-direction: column
     align-items: center
- .types
+  .types
     &__card
       margin-bottom: 6.2rem 
- .design
+  .design
     &__card
       margin-bottom: 6.7rem       
- .card
+  .card
     &__text
-      margin-left: 0 
+      margin-left: 0   
+  .design
+    background-color: $dark 
+    &__section-title
+      color: $light   
+  .section-title     
+    &__text p
+      color: $light         
+  
+ 
   
 @media screen and ( max-width: 576px)
   .container
@@ -81,13 +83,8 @@
       margin-bottom: 1.85rem
       padding: 20px
       font-size: 13px
-  .design
-    background-color: $dark 
-    &__section-title
-      color: $light 
   .section-title     
     &__text p
-      color: $light 
       font-size: 1.25rem
       max-width: 25.5rem  
       line-height: 1.6rem
