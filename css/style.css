@@ -598,7 +598,8 @@ img {
     text-transform: none;
     font-family: 'Futura Book', sans-serif;
     font-size: 1.42rem;
-    color: #363636; }
+    color: #363636;
+    line-height: 1.5; }
 
 .card__pricetag--design {
   padding: 1.214rem 5.5rem 1.214rem 2.35rem; }
@@ -636,7 +637,7 @@ img {
   .hero__content {
     margin-left: 0; }
   .card__text--types {
-    max-height: 20.41rem; } }
+    max-height: 22rem; } }
 
 @media screen and (max-width: 760px) {
   .row {
