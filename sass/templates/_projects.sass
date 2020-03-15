@@ -1,12 +1,18 @@
 .swiper
   &-slide
-    display: flex
-    flex-wrap: wrap
+    // display: flex
+    // flex-wrap: wrap
+    &__wrap
+      display: flex
+      flex-wrap: wrap
+      width: 70%
+      margin-bottom: 5rem
+      &--img
+        display: block
+        background: no-repeat center
     &__text
       flex-basis: 50%
       margin-bottom: 2.42rem
-      &:nth-last-child(2)
-        margin-bottom: 6rem
     &__heading
       font-size: 1.3rem
       color: $primary  

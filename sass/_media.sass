@@ -11,6 +11,8 @@
     font-size: 12px      
 
 @media screen and ( max-width: 991px)
+  .col-45, .col-55
+    width: 90%
   .button
     &--primary
       &:hover
@@ -25,6 +27,15 @@
       display: none
     &__content
       margin-left: 0 
+  .swiper
+    &-slide  
+      &__heading
+        font-size: 1.16rem 
+      &__wrap
+       width: auto   
+       margin-bottom: 2rem
+       &--img
+        padding-top: 3rem;
   .row
     flex-direction: column
     align-items: center
@@ -41,9 +52,16 @@
     background-color: $dark 
     &__section-title
       color: $light   
-  .section-title     
-    &__text p
-      color: $light         
+  .section
+    &-title     
+      &__subtitle
+        &--design p
+        color: $light 
+      &__word         
+        &::after
+          display: none
+      &__text
+        font-size: 1.17rem    
   
  
   
