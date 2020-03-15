@@ -40,54 +40,81 @@ document.addEventListener("DOMContentLoaded", (event) =>{
 */
 
 $(document).ready(function () {
+  //МОДАЛЬНОЕ ОКНО
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close');
      
-      
-modalBtn.on('click', function(){
- modal.toggleClass('modal--visible'); 
-});      
-closeBtn.on('click', function(){
-  modal.toggleClass('modal--visible'); 
-});
-
-//Слайдер
-var mySwiper = new Swiper ('.swiper-container', {
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  var pressESC = function (event) {
+    console.log(1);
+    if(event.keyCode === 27){ // Если код кнопки 27(ESC) закрываем модальную форму
+      $(document).unbind('keyup', pressESC);
+      modal.removeClass('modal--visible');
+    }
   }
-})
+  
+  var switchModal = function (){
+    modal.toggleClass('modal--visible');
+    // если modal Имеет класс modal--visible добавляем событие keyup
+    if(modal.hasClass('modal--visible')){
+      $(document).on('keyup', pressESC);
+    }
+    else{ // иначе удаляем событие
+      $(document).unbind('keyup', pressESC);
+    }
+  };
+  
+  modalBtn.on('click', switchModal);  
+
+  closeBtn.on('click', switchModal);
+
+  modal.on('click', function(event){
+    var target = event.target;
+    if(target.classList.contains('modal')){
+      modal.removeClass('modal--visible'); 
+    }
+  });
+  //Слайдер
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-next.css('left', prev.width() + 30 + bullets.width() +30 )
-bullets.css('left', prev.width() + 30)
+  next.css('left', prev.width() + 30 + bullets.width() +30 )
+  bullets.css('left', prev.width() + 30)
+  // КОНЕЦ СЛАЙДЕРА
 
-
-});
-
-// Стрелка НАВЕРХ
-
-$(document).ready(function(){
+// СТРЕЛКА НАВЕРХ
     $(window).scroll(function(){
+      if(window.matchMedia('(min-width: 992px)').matches){
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
         } else {
             $('.scrollup').fadeOut();
         }
-        });
-          
-        $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
+      }else {
+        $('.scrollup').fadeOut();
+      };
     });
- 
+        
+    $('.scrollup').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+    }); 
+    
+             
+
 });
+
+
+ 
