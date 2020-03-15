@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", (event) =>{ 
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -34,4 +35,39 @@ document.addEventListener("DOMContentLoaded", (event) =>{
     }
   });
   
+});
+
+*/
+
+$(document).ready(function () {
+  var modal = $('.modal'),
+      modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close');
+     
+      
+modalBtn.on('click', function(){
+ modal.toggleClass('modal--visible'); 
+});      
+closeBtn.on('click', function(){
+  modal.toggleClass('modal--visible'); 
+});
+
+});
+
+// Стрелка НАВЕРХ
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+        });
+          
+        $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+ 
 });

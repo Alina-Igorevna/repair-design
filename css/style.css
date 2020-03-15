@@ -396,6 +396,34 @@ template {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.scrollup {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+  font-family: 'Yeseva One', cursive;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  z-index: 1000; }
+  .scrollup:hover {
+    color: #e3b873; }
+  .scrollup::before {
+    content: '';
+    background: url("../img/arrow-down.svg") no-repeat center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e3b873;
+    border-radius: 50%;
+    margin-right: 12px;
+    transform: rotate(180deg); }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -736,6 +764,8 @@ img {
     font-size: 12px; } }
 
 @media screen and (max-width: 991px) {
+  .scrollup {
+    display: none; }
   .button--primary:hover {
     background-color: #e3b873; }
   .button--outline:hover {

@@ -67,6 +67,40 @@
         
 
 
-      
+.scrollup
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $dark
+  font-family: 'Yeseva One', cursive
+  font-size: 0.85rem
+  text-transform: uppercase
+  color: $light
+  text-decoration: none
+  padding: 5px 10px
+  text-align: center
+  bottom: 0
+  right: 0
+  z-index: 1000
+  &:hover 
+      color: $primary
+  &::before
+    content: ''
+    background: url('../img/arrow-down.svg') no-repeat center
+    width: 30px
+    height: 30px
+    border: 1px solid $primary
+    border-radius: 50%
+    margin-right: 12px
+    transform: rotate(180deg)
+ 
+  
+
+
+  
+ 
+
+
 
     
