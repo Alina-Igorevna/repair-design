@@ -46,7 +46,6 @@ $(document).ready(function () {
       closeBtn = $('.modal__close');
      
   var pressESC = function (event) {
-    console.log(1);
     if(event.keyCode === 27){ // Если код кнопки 27(ESC) закрываем модальную форму
       $(document).unbind('keyup', pressESC);
       modal.removeClass('modal--visible');
@@ -74,7 +73,8 @@ $(document).ready(function () {
       modal.removeClass('modal--visible'); 
     }
   });
-  //Слайдер
+
+  //СЛАЙДЕР
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
     pagination: {
@@ -90,8 +90,8 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 30 + bullets.width() +30 )
-  bullets.css('left', prev.width() + 30)
+  next.css('left', prev.width() + 27 + bullets.width() + 27 )
+  bullets.css('left', prev.width() + 27);
   // КОНЕЦ СЛАЙДЕРА
 
 // СТРЕЛКА НАВЕРХ
@@ -111,8 +111,10 @@ $(document).ready(function () {
       $("html, body").animate({ scrollTop: 0 }, 600);
       return false;
     }); 
+    // КОНЕЦ СТРЕЛКИ НАВЕРХ
     
-             
+    //АКТИВАЦИЯ СКРИПТА ДЛЯ АНИМАЦИИ
+    new WOW().init();         
 
 });
 
