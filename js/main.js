@@ -75,8 +75,9 @@ $(document).ready(function () {
   });
 
   //СЛАЙДЕР
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
+    spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
