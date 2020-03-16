@@ -74,7 +74,7 @@ $(document).ready(function () {
     }
   });
 
-  //СЛАЙДЕР
+  //СЛАЙДЕР ПРОЕКТЫ
   var mySwiper = new Swiper ('.projects__swiper-container', {
     loop: true,
     spaceBetween: 30,
@@ -93,6 +93,30 @@ $(document).ready(function () {
 
   next.css('left', prev.width() + 27 + bullets.width() + 27 )
   bullets.css('left', prev.width() + 27);
+  // КОНЕЦ СЛАЙДЕРА
+
+  //СЛАЙДЕР 6 ШАГОВ
+  var SwiperStep = new Swiper ('.sixsteps__swiper-container', {
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+
+  next.css('left', prev.width() + 27 + bullets.width() + 27 )
+  bullets.css('left', prev.width() + 27);
+
+  // document.querySelector('.step--first').addEventListener('click', function(e){
+  // });
   // КОНЕЦ СЛАЙДЕРА
 
 // СТРЕЛКА НАВЕРХ
