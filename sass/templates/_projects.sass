@@ -2,6 +2,25 @@
   padding-bottom: 29rem
   &__section-title
     margin-bottom: 3.3rem
+  &__swiper
+    &-pagination
+      display: inline-block
+    &-button
+      &-prev, &-next
+        display: inline-block
+        bottom: 0
+        top: auto
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &::after
+          display: none
+      &-next  
+        background: url('../img/arrow-next.svg') no-repeat center     
+      &-prev
+        left: 0
+        background: url('../img/arrow-prev.svg') no-repeat center 
+
 .swiper
   &-slide
     // display: flex
@@ -14,6 +33,12 @@
       &--img
         display: block
         background: no-repeat center
+        width: 100%
+        height: 34.42rem
+        & img
+          height: 100%
+          width: 100%
+          object-fit: cover
     &__text
       flex-basis: 50%
       margin-bottom: 2.6rem
@@ -30,24 +55,12 @@
       font-size: 1.07rem
       line-height: 1.42rem  
   &-pagination
+    display: inline-block
     &-bullet    
       background-color: rgba($light, 0.3)
       &-active
         background-color: $light
-  &-button
-    &-prev, &-next
-      bottom: 0
-      top: auto
-      background-size: 42px
-      width: 42px
-      height: 14px
-      &::after
-        display: none
-    &-next  
-      background: url('../img/arrow-next.svg') no-repeat center     
-    &-prev
-      left: 0
-      background: url('../img/arrow-prev.svg') no-repeat center        
+         
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto

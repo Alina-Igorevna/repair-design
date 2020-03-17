@@ -20,7 +20,33 @@
   &__menu
     display: flex
     justify-content: space-between 
-    flex-wrap: wrap;  
+    flex-wrap: wrap
+  &__swiper
+    &-slide
+      &__wrap
+        width: 100%
+        height: 26.902rem
+        & img
+          height: 100%
+          width: 100%
+          object-fit: cover
+    &-pagination
+      display: inline-block
+    &-button
+      &-prev, &-next  
+        display: inline-block
+        bottom: 0
+        top: auto
+        background-size: 42px
+        width: 42px
+        height: 14px
+        &::after
+          display: none
+      &-next  
+        background: url('../img/arrow-next.svg') no-repeat center     
+      &-prev
+        left: 0
+        background: url('../img/arrow-prev.svg') no-repeat center     
 .step
   font-size: 1.07rem
   flex-basis: 32%
