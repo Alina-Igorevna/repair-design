@@ -467,6 +467,9 @@ input.invalid {
   flex-basis: 23%; }
 
 .col-30 {
+  flex-basis: 30%; }
+
+.col-32 {
   flex-basis: 32%; }
 
 .col-35 {
@@ -1013,7 +1016,8 @@ img {
 .team {
   margin-top: -30rem;
   margin-top: -35rem;
-  padding-top: 5.2rem; }
+  padding-top: 5.2rem;
+  padding-bottom: 1.8rem; }
   .team__row {
     margin-bottom: 4rem; }
   .team__text {
@@ -1022,8 +1026,7 @@ img {
     text-align: center;
     color: #363636;
     font-size: 1.428rem;
-    line-height: 2.428rem;
-    margin-bottom: 4.7rem; }
+    line-height: 2.428rem; }
     .team__text::before {
       content: '';
       display: block;
@@ -1038,11 +1041,12 @@ img {
   .team__col-22--right {
     margin-right: 3rem; }
   .team__section-title {
-    margin-bottom: 4rem; }
+    margin-bottom: 4.2rem; }
     .team__section-title__subtitle {
       color: #fff;
       max-width: 32rem;
-      margin: auto; }
+      margin: auto;
+      line-height: 1.4; }
   .team__card__icon {
     margin-left: -2.3rem;
     margin-top: -2.6rem; }
@@ -1085,6 +1089,77 @@ img {
         color: #fff;
         text-transform: uppercase;
         font-weight: normal; }
+
+.client__card {
+  background-color: #fff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+  max-width: 26.857rem; }
+
+.client__section-title {
+  margin-bottom: 1.85rem; }
+  .client__section-title__subtitle {
+    max-width: 25.71rem;
+    margin: auto;
+    line-height: 1.4; }
+
+.feedback {
+  padding: 1.71rem 1rem 4.5rem 1.42rem; }
+  .feedback__card {
+    position: relative; }
+    .feedback__card__title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.1rem; }
+      .feedback__card__title__image {
+        border-radius: 50%;
+        margin-right: 1.5rem; }
+      .feedback__card__title__name {
+        flex-basis: 60%;
+        margin-top: 0.6rem; }
+    .feedback__card__subtitle {
+      font-size: 1.08rem;
+      color: #959595;
+      line-height: 1.8; }
+    .feedback__card__label {
+      position: absolute;
+      width: 21rem;
+      padding: 0.9rem 1.8rem 0.9rem 1.2rem;
+      margin-top: 2.9rem;
+      margin-left: -1.5rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between; }
+
+.card__label {
+  background-color: #e3b873; }
+  .card__label::after {
+    content: '';
+    width: 1px;
+    height: 3.94rem;
+    background-color: #fff;
+    position: absolute;
+    margin-left: 8.5rem; }
+  .card__label__area, .card__label__time {
+    display: flex;
+    align-items: center;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.21rem;
+    color: #fff; }
+  .card__label__area::before {
+    content: '';
+    width: 33px;
+    height: 30px;
+    background: url("../img/area.svg") no-repeat center;
+    margin-right: 1.3rem; }
+  .card__label__time::before {
+    content: '';
+    width: 33px;
+    height: 30px;
+    background: url("../img/calendar.svg") no-repeat center;
+    margin-right: 1rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;

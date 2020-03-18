@@ -1,0 +1,72 @@
+.client
+  &__card
+    background-color: $light
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
+    max-width: 26.857rem
+  &__section-title
+    margin-bottom: 1.85rem
+    &__subtitle  
+      max-width: 25.71rem
+      margin: auto
+      line-height: 1.4
+.feedback
+  padding: 1.71rem 1rem 4.5rem 1.42rem
+  &__card
+    position: relative
+    &__title
+      display: flex
+      align-items: center
+      margin-bottom: 1.1rem
+      &__image    
+        border-radius: 50%
+        margin-right: 1.5rem
+      &__name
+        flex-basis: 60%  
+        margin-top: 0.6rem
+    &__subtitle
+      font-size: 1.08rem
+      color: $secondary
+      line-height: 1.8
+    &__label
+      position: absolute
+      width: 21rem
+      padding: 0.9rem 1.8rem 0.9rem 1.2rem 
+      margin-top: 2.9rem
+      margin-left: -1.5rem
+      display: flex
+      align-items: center
+      flex-wrap: nowrap
+      flex-direction: row 
+      justify-content: space-between
+      
+.card
+  &__label
+    background-color: $primary
+    &::after
+        content: ''
+        width: 1px
+        height: 3.94rem
+        background-color: $light
+        position: absolute
+        margin-left: 8.5rem
+    &__area, &__time
+      display: flex
+      align-items: center
+      font-family: 'Yeseva One', cursive
+      font-weight: normal
+      font-size: 1.21rem
+      color: $light      
+    &__area
+      &::before
+        content: ''
+        width: 33px
+        height: 30px
+        background: url('../img/area.svg') no-repeat center
+        margin-right: 1.3rem
+    &__time  
+      &::before
+        content: ''
+        width: 33px
+        height: 30px
+        background: url('../img/calendar.svg') no-repeat center   
+        margin-right: 1rem
