@@ -157,7 +157,7 @@ $(document).ready(function () {
         $('.scrollup').fadeOut();
       };
     });
-        
+
     $('.scrollup').click(function(){
       $("html, body").animate({ scrollTop: 0 }, 600);
       return false;
@@ -167,7 +167,9 @@ $(document).ready(function () {
     //АКТИВАЦИЯ СКРИПТА ДЛЯ АНИМАЦИИ
     new WOW().init();    
     
+    
     //ВАЛИДАЦИЯ ФОРМЫ
+    //Модальное окно
     $('.modal__form').validate({
       errorClass: "invalid",
       rules: {
@@ -197,6 +199,52 @@ $(document).ready(function () {
       }
     });
 
+    //видео контроль
+    $('.control__form').validate({
+      errorClass: "invalid",
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        }, //поле должно быть обязательное
+        userPhone: "required" 
+      },
+      // сообщения об шибке
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя не короче двух символов",
+          maxlength: "Имя не больше 15 символов"
+        }, 
+        userPhone: "Заполните поле"
+      }
+    });
+
+    //футер
+    $('.footer__form').validate({
+      errorClass: "invalid",
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        }, //поле должно быть обязательное
+        userPhone: "required", 
+        userText: "required"
+      },
+      // сообщения об шибке
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя не короче двух символов",
+          maxlength: "Имя не больше 15 символов"
+        }, 
+        userPhone: "Заполните поле",
+        userText: "Заполните поле"
+      }
+    });
+
     //МАСКА ДЛЯ НОМЕРА ТЕЛЕФОНА 
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
@@ -206,6 +254,7 @@ $(document).ready(function () {
               center: [47.244729, 39.723187],
               zoom: 9
           }, {
+              //autoFitToViewport: 'always',
               searchControlProvider: 'yandex#search'
           }),
   

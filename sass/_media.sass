@@ -11,9 +11,12 @@
     font-size: 12px      
 
 @media screen and ( max-width: 991px)
+  .row
+    flex-direction: column
+    align-items: center
   .col-45, .col-55
     width: 100%
-  .button
+  .button //отключиь ховер эффекты
     &--primary
       &:hover
         background-color: $primary
@@ -22,12 +25,23 @@
        border-color: $light    
   .nav
     display: none
-  .hero
+  .hero //ГЛАВНЫЙ БЛОК
     &__instagram
       display: none
     &__content
       margin-left: 0 
-  .swiper
+  .projects //ЗАВЕРШЕННЫЕ ПРОЕКТЫ
+    &__swiper-slide
+      &__wrap  
+        width: 90%   
+        margin-bottom: 2rem  
+    &__col-45
+      margin-bottom: 3rem
+    &__col-55      
+      display: flex
+      align-items: center
+      justify-content: center
+  .swiper 
     &-slide  
       &__heading
         font-size: 1.16rem 
@@ -37,22 +51,19 @@
        &--img
         padding-top: 3rem
         text-align: center
-  .row
-    flex-direction: column
-    align-items: center
-  .types
+  .types //ВИДЫ РЕМОНТА
     &__card
       margin-bottom: 6.2rem 
-  .design
+  .design //ДИЗАЙН ПРОЕКТ
+    background-color: $dark 
+    margin-bottom: 0
+    &__section-title
+      color: $light
     &__card
       margin-bottom: 6.7rem       
   .card
     &__text
       margin-left: 0   
-  .design
-    background-color: $dark 
-    &__section-title
-      color: $light   
   .section
     &-title     
       &__subtitle
@@ -62,11 +73,39 @@
         &::after
           display: none
       &__text
-        font-size: 1.17rem    
-  
+        font-size: 1.17rem   
+  .sixsteps //ШЕСТЬ ШАГОВ ДО ЦЕЛИ
+    display: none   
+  .team //НАША КОМАНДА      
+    background-color: $dark 
+    margin-top: -1px   
+    &__section-title
+      padding-top: 1.3rem
+      margin-bottom: 5.5rem
+    &__text
+      display: none
+    &__col-22
+      margin-left: 0
+      margin-bottom: 10rem
+      &--left
+        margin-left: 0
+      &--right
+        margin-right: 0
+  .client //НАШИ КЛИЕНТЫ     
+    display: none   
+  .footer //ПОДВАЛ
+    background: $dark
+    padding-bottom: 1rem
+    &__menu
+      display: none
+    &__wrap
+      margin-top: -12rem
+      
  
   
 @media screen and ( max-width: 576px)
+  .section
+    padding: 0
   .container
     width: 90%
     .menu
@@ -83,8 +122,10 @@
     font-size: 1.91rem
     line-height: 1.4
     max-width: 22.86rem
-  .hero
+  .hero //Первый блок
     padding-top: 0
+    &__title
+      margin-top: 3rem
     &__sсroll-down
       display: none
     &__content
@@ -92,7 +133,7 @@
       margin-left: 0
     &__text
       font-size: 1.5rem
-      margin-bottom: 2.94rem
+      margin-bottom: 2.7rem
       max-width: 26.5rem  
       line-height: 2rem
     &__button
@@ -100,12 +141,27 @@
       margin-bottom: 1.85rem
       padding: 20px
       font-size: 13px
-  .projects
+  .projects //ЗАВЕРШЕННЫЕ ПРОЕКТЫ
+    padding-top: 0
+    padding-bottom: 0
     &__section-title 
       width: 90%  
       margin-bottom: 2.8rem 
-  .control
+    &__swiper
+      &-slide
+        &__wrap 
+          margin-bottom: 2rem  
+          &--img
+           height: auto
+           & img
+             height: auto
+      &-container     
+        margin-bottom: 3rem
+  .control //ВИДЕО КОНТРОЛЬ
     background: $dark
+    margin-top: -1px
+    padding-bottom: 7.5rem
+    margin-bottom: 6.5rem
     &__label
       font-size: 1.25rem 
       color: rgba($light, 0.5) 
@@ -117,6 +173,7 @@
         color: $light 
       &#user-name
         margin-bottom: 5.5rem
+        padding: 0.9rem 0 0 0
     &__form
       flex-direction: column
     &__text
@@ -133,13 +190,14 @@
       margin-bottom: 2.4rem
     &__section
       &-title
-        margin-top: -31rem
+        margin-top: 0rem
         margin-bottom: 3.6rem
     &__button  
       order: 5 
-      margin-top: 5rem
-      padding: 1.5rem
+      padding: 1.4rem 10.8rem
       font-size: 1.25rem
+      position: absolute
+      margin-top: 22rem
     &__policy-label 
       justify-content: start  
       font-size: 1.33rem
@@ -158,7 +216,7 @@
       font-size: 1.83rem  
       &--primary
        margin-bottom: 1.9rem
-  .types
+  .types //ВИДЫ РЕМОНТА
     &__section-title
       margin-bottom: 3rem
   .card
@@ -170,11 +228,78 @@
       font-size: 1.1rem
       line-height: 1.9rem
     &__pricetag
-      // bottom: -1.2rem 
       &--types
        padding: 1.1rem 2.5rem
       &--design 
        padding: 1rem 3.9rem 1rem 3.5rem
+  .design //ДИЗАЙН ПРОЕКТ
+    margin-bottom: 0
+  .section-title
+    margin-bottom: 1.5rem
+    &__subtitle--design  
+      font-size: 1.25rem  
+      width: 90%
+      margin: auto
+      margin-top: 0.5rem;
+      line-height: 1.4
+  .team  //НАША КОМАНДА
+    &__section-title
+      &__subtitle
+        font-size: 1.25rem
+  .footer //ПОДВАЛ
+    margin-top: -13.4rem
+    display: flex
+    &__container
+      display: flex
+      flex-direction: column
+    &__title
+      font-size: 1.6rem
+      margin-bottom: 4.7rem
+    &__wrap
+      margin-top: 0
+      background-color: $dark
+      margin-bottom: 1.7rem
+    &__form  
+      display: flex
+      flex-direction: column  
+    &__input
+      font-size: 1.5rem
+      margin-top: 0.3rem
+      padding-bottom: 0.5rem 
+      &-group
+        margin-bottom: 5rem
+        &-full-width
+          margin-bottom: 0.7rem
+    &__policy
+      margin-bottom: 5.5rem     
+    &__button
+      font-size: 1.25rem
+      padding: 1.4rem 10.7rem
+    &__map
+      max-width: 28rem
+      max-height: 21rem  !important
+      min-height: 21rem
+      margin-bottom: 3.3rem
+  .form
+    &__label     
+      font-size: 1.25rem
+  .address
+    max-width: 27rem  
+    order: 5
+    &__title
+      font-size: 1.5rem
+    &__icon
+     margin-right: 1.7rem  
+     width: 39px
+     height: 39px
+     & img
+       width: 16px
+       height: 16px
+    
+   
+        
+    
+    
 
 
         
@@ -184,6 +309,14 @@
   .hero
     &__sсroll-down
       display: none
-  
+
+@media screen and ( max-height: 375px)
+  .col-22
+    width: 100%
+  .team
+    &__card
+      &__icon 
+       margin-left: -0.1rem
+       margin-top: -2.7rem  
 
   

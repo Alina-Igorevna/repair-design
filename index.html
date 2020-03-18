@@ -55,7 +55,7 @@
      <section class="section section--dark projects">
        <div class="container">
         <div class="row">
-          <div class="col-45 wow fadeInLeft">
+          <div class="col-45 projects__col-45 wow fadeInLeft">
             <div class="section-title projects__section-title">
               <h2 class="section-title__heading  projects__section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
               <!-- /.section-title__heading -->
@@ -156,7 +156,7 @@
             <!-- /. Slider main container -->
           </div>
           <!-- /.col-50 -->
-          <div class="col-55 wow fadeInRight">
+          <div class="col-55 projects__col-55 wow fadeInRight">
             <!-- Slider main container -->
             <div class="swiper-container projects__swiper-container">
               <div class="swiper-wrapper swiper-no-swiping">
@@ -677,7 +677,7 @@
         </div>
         <!-- /.section-title team__section-title -->
         <div class="row row--around team__row">
-         <div class="col-22 team__col-22--left">
+         <div class="col-22 team__col-22 team__col-22--left">
            <div class="card team__card">
             <img src="img/idea.svg" alt="icon" class="card__icon team__card__icon">
              <div class="card__image">
@@ -698,7 +698,7 @@
            <!-- /.card -->
          </div>
          <!-- /.col -->
-         <div class="col-22">
+         <div class="col-22 team__col-22">
           <div class="card team__card">
            <img src="img/write.svg" alt="icon" class="card__icon team__card__icon">
             <div class="card__image">
@@ -719,7 +719,7 @@
           <!-- /.card -->
         </div>
         <!-- /.col -->
-        <div class="col-22 team__col-22--right">
+        <div class="col-22 team__col-22 team__col-22--right">
           <div class="card team__card">
            <img src="img/portfolio.svg" alt="icon" class="card__icon team__card__icon">
             <div class="card__image">
@@ -834,25 +834,25 @@
     <!-- /.section client -->
    </main>
    <footer class="footer section--dark">
-     <div class="container">
+     <div class="container footer__container">
        <div class="footer__wrap">
          <h3 class="footer__title">Остались вопросы?</h3>
         <form action="#" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="user-name" class="label label--light form__label">Имя</label>
-            <input type="text" class="input form__input input--light footer__input" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input input--light footer__input" id="user-name" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
           
           <div class="input-group footer__input-group">
             <label for="user-phone" class="label label--light form__label">Телефон</label>
-            <input type="tel" class="input form__input input--light footer__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input input--light footer__input" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
           
           <div class="input-group footer__input-group footer__input-group-full-width">
             <label for="user-question" class="label label--light form__label">Вопрос</label>
-            <input type="text" class="input form__input input--light footer__input" id="user-question" placeholder="Я хочу спросить:">
+            <input type="text" name="userText"  class="input form__input input--light footer__input" id="user-question" placeholder="Я хочу спросить:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="policy footer__policy">
@@ -873,10 +873,10 @@
          <!-- /.address__icon__wrap -->
        </div>
        <!-- /.address footer__address -->
-       <div class="map footer__map" id="map">
-        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaedfb6d42ab98d49ff010a8cc6de514c71b98458cc7fc6d9268fd0051ef8a66f&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script> -->
-       </div>
-       <!-- /.map footer__map -->
+        <div class="map footer__map" id="map">
+          <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaedfb6d42ab98d49ff010a8cc6de514c71b98458cc7fc6d9268fd0051ef8a66f&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script> -->
+         </div>
+         <!-- /.map footer__map -->
      </div>
      <!-- /.container -->
      <div class="footer__menu">
