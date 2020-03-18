@@ -17,8 +17,6 @@ img
     color: $light
   &-title 
     text-align: center
-    &--light
-      color: $light
     &__heading
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
@@ -30,9 +28,9 @@ img
         color: $primary
         font-size: 1.928rem
         margin: 0
-        margin-bottom: 1.6rem
-        letter-spacing: -0.07em
         text-align: left
+      &--light
+        color: $light 
     &__word
       display: flex
       align-items: center  
@@ -45,9 +43,10 @@ img
     &__text
       font-size: 1.3rem   
       line-height: 2.07rem
-      max-width: 31.57rem 
       padding: 0
       text-align: left
+      &--uppercase
+        text-transform: uppercase
     &__image
       display: flex
       justify-content: center

@@ -1,10 +1,48 @@
 .projects
   padding-bottom: 29rem
+  padding-top: 9.1em
   &__section-title
     margin-bottom: 3.3rem
-  &__swiper
+    &__heading
+      margin-bottom: 1.6rem
+      letter-spacing: -0.07em
+    &__text  
+      max-width: 31.57rem
+  &__swiper //СВАЙПЕР
+    &-slide
+      &__wrap
+        display: flex
+        flex-wrap: wrap
+        width: 70%
+        margin-bottom: 4.5rem
+      &--img
+        display: block
+        background: no-repeat center
+        width: 100%
+        height: 34.42rem
+        & img
+          height: 100%
+          width: 100%
+          object-fit: cover
+      &__text
+        flex-basis: 50%
+        margin-bottom: 2.6rem
+      &__heading
+        font-size: 1.3rem
+        color: $primary  
+        font-family: 'Yeseva One', cursive
+        font-weight: 400
+        line-height: 1.78rem
+        text-transform: uppercase
+        margin: 0
+        margin-bottom: 0.64rem
+      &__value
+        font-size: 1.07rem
+        line-height: 1.42rem
     &-pagination
       display: inline-block
+      position: absolute
+      z-index: 99
     &-button
       &-prev, &-next
         display: inline-block
@@ -13,6 +51,8 @@
         background-size: 42px
         width: 42px
         height: 14px
+        position: absolute
+        z-index: 99
         &::after
           display: none
       &-next  
@@ -23,37 +63,6 @@
 
 .swiper
   &-slide
-    // display: flex
-    // flex-wrap: wrap
-    &__wrap
-      display: flex
-      flex-wrap: wrap
-      width: 70%
-      margin-bottom: 4.5rem
-      &--img
-        display: block
-        background: no-repeat center
-        width: 100%
-        height: 34.42rem
-        & img
-          height: 100%
-          width: 100%
-          object-fit: cover
-    &__text
-      flex-basis: 50%
-      margin-bottom: 2.6rem
-    &__heading
-      font-size: 1.3rem
-      color: $primary  
-      font-family: 'Yeseva One', cursive
-      font-weight: 400
-      line-height: 1.78rem
-      text-transform: uppercase
-      margin: 0
-      margin-bottom: 0.64rem
-    &__value
-      font-size: 1.07rem
-      line-height: 1.42rem  
   &-pagination
     display: inline-block
     &-bullet    

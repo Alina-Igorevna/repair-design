@@ -1,37 +1,64 @@
 .swiper-slide
-  &__wrap-sixsteps
-    width: 90%
-    margin-bottom: 4.35rem
-  &__number
-    font-family: 'Yeseva One', cursive
-    text-transform: uppercase
-    font-size: 1.28rem
-  &__title
-    font-family: 'Yeseva One', cursive
-    text-transform: uppercase
-    font-size: 1.07rem
-    color: $primary
-    font-weight: 400
-  &__description
-    font-size: 1.07rem
-    line-height: 1.78rem
+  
+  
 
 .sixsteps
+  padding-top: 35rem
+  &__col-35
+   margin-top: -5.7rem
+  &__section-title
+    &__text 
+      font-size: 1.07rem
+      margin: 0
+      margin-bottom: 0.8rem
+    &__heading
+      margin-bottom: 6.4rem
+  &__swiper-slide
+    &__image
+      padding-left: 3rem
+      width: 100%
+      height: 26.902rem
+      & img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__wrap      
+      width: 80%
+      margin-bottom: 6.2rem
+    &__number
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      font-size: 1.28rem
+    &__title
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      font-size: 1.07rem
+      color: $primary
+      font-weight: 400
+      margin: 0
+      margin-top: 1.6rem
+      line-height: 1.5
+      margin-bottom: 0.5rem
+    &__description
+      font-size: 1.07rem
+      line-height: 1.78rem  
+      margin: 0
   &__menu
     display: flex
-    justify-content: space-between 
-    flex-wrap: wrap
+    // justify-content: space-between 
+    // flex-wrap: wrap
+    flex-direction: column
+    padding-top: 1rem
+    padding-left: 3rem
+    &__wrap
+      display: flex
+      justify-content: space-between 
+      flex-wrap: wrap
   &__swiper
-    &-slide
-      &__wrap
-        width: 100%
-        height: 26.902rem
-        & img
-          height: 100%
-          width: 100%
-          object-fit: cover
     &-pagination
       display: inline-block
+      position: absolute
+      z-index: 99
     &-button
       &-prev, &-next  
         display: inline-block
@@ -40,19 +67,40 @@
         background-size: 42px
         width: 42px
         height: 14px
+        position: absolute
+        z-index: 99
         &::after
           display: none
       &-next  
         background: url('../img/arrow-next.svg') no-repeat center     
       &-prev
         left: 0
-        background: url('../img/arrow-prev.svg') no-repeat center     
+        background: url('../img/arrow-prev.svg') no-repeat center   
+  &__step
+    &__number  
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase 
+      font-size: 1.07rem
+      margin-bottom: 0.6rem
+      &::after
+        content: ''
+        display: block
+        width: 20px
+        height: 1px
+        margin-top: 3px
+        background-color: $primary
+    &__text  
+      line-height: 1.28rem   
+      font-size: 1.07rem  
+      margin-bottom: 3.3rem  
 .step
-  font-size: 1.07rem
-  flex-basis: 32%
-  &__number     
-    font-family: 'Yeseva One', cursive
-    text-transform: uppercase
-  &__text  
-    line-height: 1.28rem
+  flex-basis: 13%
+  color: rgba($light, 0.4)
+  &--fourth, &--fifth
+    flex-basis: 19%
+  &--active
+    color: $light
+       
+    
+  
 

@@ -97,7 +97,6 @@ $(document).ready(function () {
 
   //СЛАЙДЕР 6 ШАГОВ
   var SwiperStep = new Swiper ('.sixsteps__swiper-container', {
-    loop: true,
     spaceBetween: 30,
     pagination: {
       el: '.sixsteps__swiper-pagination',
@@ -108,15 +107,42 @@ $(document).ready(function () {
       prevEl: '.sixsteps__swiper-button-prev',
     }
   });
-  var nextStep = $('.sixsteps__swiper-button-next');
+
+  // отсупы между кнопка свайпера
+  var nextStep = $('.sixsteps__swiper-button-next'); 
   var prevStep = $('.sixsteps__swiper-button-prev');
   var bulletsStep = $('.sixsteps__swiper-pagination');
-
-  nextStep.css('left', prevStep.width() + 27 + bulletsStep.width() + 27 )
+  //Кнопки шагов в меню
+  var stepAll = document.querySelectorAll('.step');
+  // Отступы между кнопками навигации
+  nextStep.css('left', prevStep.width() + 27 + bulletsStep.width() + 27 );
   bulletsStep.css('left', prevStep.width() + 27);
+  // конец отсупы между кнопка свайпера
 
-  // document.querySelector('.step--first').addEventListener('click', function(e){
-  // });
+  // Функция дизактивации кнопок
+  function stepDesable(){
+    stepAll.forEach( function(elem){
+      elem.classList.remove('step--active');
+    });
+  };
+
+  // Вешаем обработчик события на изменения слайдера
+  SwiperStep[0].on('slideChange', function () {
+    stepDesable();
+    stepAll[this.activeIndex].classList.add('step--active');
+  });
+
+  //Вешаем обработчик события на нажитие кнопок меню
+  stepAll.forEach( function(elem, index){
+    elem.addEventListener('click', function(event){
+      var target =  event.target;
+      if(target.classList.contains('step') || target.parentNode.classList.contains('step')){
+        SwiperStep.forEach(function(elem){
+          elem.slideTo(index);
+        });
+      }
+    });
+  });
   // КОНЕЦ СЛАЙДЕРА
 
 // СТРЕЛКА НАВЕРХ
@@ -139,7 +165,40 @@ $(document).ready(function () {
     // КОНЕЦ СТРЕЛКИ НАВЕРХ
     
     //АКТИВАЦИЯ СКРИПТА ДЛЯ АНИМАЦИИ
-    new WOW().init();         
+    new WOW().init();    
+    
+    //ВАЛИДАЦИЯ ФОРМЫ
+    $('.modal__form').validate({
+      errorClass: "invalid",
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        }, //поле должно быть обязательное
+        userPhone: "required", 
+        userEmail: {
+          required: true,
+          email: true
+        }
+      },
+      // сообщения об шибке
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя не короче двух символов",
+          maxlength: "Имя не больше 15 символов"
+        }, 
+        userPhone: "Заполните поле",
+        userEmail: {
+          required: "Заполните поле",
+          email: "Введите в формате: name@domain.com"
+        }
+      }
+    });
+
+    //МАСКА ДЛЯ ТЕЛЕФОНА 
+    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
 });
 
