@@ -1090,17 +1090,19 @@ img {
         text-transform: uppercase;
         font-weight: normal; }
 
-.client__card {
-  background-color: #fff;
-  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
-  max-width: 26.857rem; }
-
-.client__section-title {
-  margin-bottom: 1.85rem; }
-  .client__section-title__subtitle {
-    max-width: 25.71rem;
-    margin: auto;
-    line-height: 1.4; }
+.client {
+  padding-bottom: 19rem;
+  margin-bottom: 8.5rem; }
+  .client__card {
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    max-width: 26.857rem; }
+  .client__section-title {
+    margin-bottom: 1.85rem; }
+    .client__section-title__subtitle {
+      max-width: 25.71rem;
+      margin: auto;
+      line-height: 1.4; }
 
 .feedback {
   padding: 1.71rem 1rem 4.5rem 1.42rem; }
@@ -1168,8 +1170,9 @@ img {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
-    margin-bottom: 3.714rem;
-    padding: 2.5rem; }
+    margin-bottom: 3.5rem;
+    padding: 1.3rem 0 2.3rem 0;
+    margin-top: -19rem; }
   .footer__title {
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
@@ -1183,21 +1186,57 @@ img {
     justify-content: space-between;
     max-width: 37.142rem;
     margin: auto; }
+  .footer__input {
+    padding: 0; }
   .footer__input-group {
     display: flex;
     flex-direction: column;
     flex-basis: 45%;
-    margin-bottom: 2rem; }
+    margin-bottom: 4rem; }
     .footer__input-group-full-width {
-      flex-basis: 100%; }
+      flex-basis: 100%;
+      margin-bottom: 2.8rem; }
   .footer__policy {
     flex-basis: 100%;
-    margin-bottom: 2rem; }
+    margin-bottom: 3.5rem; }
   .footer__button {
-    margin: auto; }
+    margin: auto;
+    font-size: 1.07rem;
+    padding: 1.3rem 4.3rem; }
   .footer__menu {
     background-color: #131313;
-    padding: 1.285rem 0; }
+    padding: 4rem 0; }
+  .footer__map {
+    margin: auto;
+    margin-bottom: 4.7rem;
+    max-width: 66.07rem;
+    min-height: 33.21rem; }
+
+.address {
+  max-width: 35rem;
+  margin: auto;
+  text-align: center; }
+  .address__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #e3b873;
+    border-radius: 50%;
+    margin-right: 1rem; }
+    .address__icon img {
+      width: 12px;
+      height: 12px; }
+    .address__icon__wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem; }
+  .address__title {
+    font-size: 1.42rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1.5rem; }
 
 .modal {
   opacity: 0;

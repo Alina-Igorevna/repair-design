@@ -197,9 +197,46 @@ $(document).ready(function () {
       }
     });
 
-    //МАСКА ДЛЯ ТЕЛЕФОНА 
+    //МАСКА ДЛЯ НОМЕРА ТЕЛЕФОНА 
     $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
+    //ЯНДЕКС КАРТЫ 
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [47.244729, 39.723187],
+              zoom: 9
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+  
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+  
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Наш офис',
+              balloonContent: 'Вход со двора'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/mapmarker.png',
+              // Размеры метки.
+              iconImageSize: [32, 32],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          });
+          //Сообщаем карте, что ей следует привести свои размеры к размерам контейнера.
+          myMap.container.fitToViewport();
+      
+      myMap.geoObjects
+          .add(myPlacemark);
+  });
+
+//КОНЕЦ JS
 });
 
 
