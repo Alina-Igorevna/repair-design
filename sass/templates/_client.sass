@@ -1,10 +1,15 @@
 .client
   padding-bottom: 19rem
   margin-bottom: 8.5rem
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: stretch
   &__card
     background-color: $light
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
     max-width: 26.857rem
+    height: 100%
   &__section-title
     margin-bottom: 1.85rem
     &__subtitle  
@@ -34,6 +39,7 @@
       width: 21rem
       padding: 0.9rem 1.8rem 0.9rem 1.2rem 
       margin-top: -1.6rem
+      // bottom: 0
       // margin-top: 2.9rem
       // margin-left: -1.5rem
       display: flex
