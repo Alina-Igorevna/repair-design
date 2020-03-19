@@ -178,7 +178,10 @@ $(document).ready(function () {
           minlength: 2,
           maxlength: 15
         }, //поле должно быть обязательное
-        userPhone: "required", 
+        userPhone: {
+          required: true,
+          minlength: 17
+        }, 
         userEmail: {
           required: true,
           email: true
@@ -191,7 +194,10 @@ $(document).ready(function () {
           minlength: "Имя не короче двух символов",
           maxlength: "Имя не больше 15 символов"
         }, 
-        userPhone: "Заполните поле",
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Введите полный номер"
+        },
         userEmail: {
           required: "Заполните поле",
           email: "Введите в формате: name@domain.com"
@@ -208,7 +214,10 @@ $(document).ready(function () {
           minlength: 2,
           maxlength: 15
         }, //поле должно быть обязательное
-        userPhone: "required" 
+        userPhone: {
+          required: true,
+          minlength: 17
+        }        
       },
       // сообщения об шибке
       messages: {
@@ -217,7 +226,10 @@ $(document).ready(function () {
           minlength: "Имя не короче двух символов",
           maxlength: "Имя не больше 15 символов"
         }, 
-        userPhone: "Заполните поле"
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Введите полный номер"
+        },
       }
     });
 
@@ -230,7 +242,10 @@ $(document).ready(function () {
           minlength: 2,
           maxlength: 15
         }, //поле должно быть обязательное
-        userPhone: "required", 
+        userPhone: {
+          required: true,
+          minlength: 17
+        }, 
         userText: "required"
       },
       // сообщения об шибке
@@ -240,13 +255,16 @@ $(document).ready(function () {
           minlength: "Имя не короче двух символов",
           maxlength: "Имя не больше 15 символов"
         }, 
-        userPhone: "Заполните поле",
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Введите полный номер"
+        },
         userText: "Заполните поле"
       }
     });
 
     //МАСКА ДЛЯ НОМЕРА ТЕЛЕФОНА 
-    $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+    $('[type=tel]').mask('+7(000) 000-00-00');
 
     //ЯНДЕКС КАРТЫ 
     ymaps.ready(function () {
@@ -280,6 +298,7 @@ $(document).ready(function () {
           });
           //Сообщаем карте, что ей следует привести свои размеры к размерам контейнера.
           myMap.container.fitToViewport();
+          myMap.behaviors.disable('scrollZoom'); //отключить зум мышкой
       
       myMap.geoObjects
           .add(myPlacemark);

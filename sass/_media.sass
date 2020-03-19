@@ -33,7 +33,7 @@
   .projects //ЗАВЕРШЕННЫЕ ПРОЕКТЫ
     &__swiper-slide
       &__wrap  
-        width: 90%   
+        width: 95%   
         margin-bottom: 2rem  
     &__col-45
       margin-bottom: 3rem
@@ -41,16 +41,16 @@
       display: flex
       align-items: center
       justify-content: center
-  .swiper 
-    &-slide  
-      &__heading
-        font-size: 1.16rem 
-      &__wrap
-       width: auto   
-       margin-bottom: 2rem
-       &--img
-        padding-top: 3rem
-        text-align: center
+    &__swiper 
+      &-slide  
+        &__heading
+          font-size: 1.16rem 
+        &__wrap
+        width: auto   
+        margin-bottom: 2rem
+        &--img
+          padding-top: 3rem
+          text-align: center
   .types //ВИДЫ РЕМОНТА
     &__card
       margin-bottom: 6.2rem 
@@ -86,7 +86,7 @@
       display: none
     &__col-22
       margin-left: 0
-      margin-bottom: 10rem
+      margin-bottom: 9.3rem
       &--left
         margin-left: 0
       &--right
@@ -147,21 +147,26 @@
     &__section-title 
       width: 90%  
       margin-bottom: 2.8rem 
+      &__text
+       line-height: 1.7
     &__swiper
       &-slide
+        &__heading
+          margin-bottom: 0.8rem
         &__wrap 
           margin-bottom: 2rem  
           &--img
-           height: auto
+           height: 17rem
            & img
              height: auto
       &-container     
-        margin-bottom: 3rem
+        // margin-bottom: 3rem
   .control //ВИДЕО КОНТРОЛЬ
     background: $dark
     margin-top: -1px
     padding-bottom: 7.5rem
     margin-bottom: 6.5rem
+    padding-top: 4rem
     &__label
       font-size: 1.25rem 
       color: rgba($light, 0.5) 
@@ -234,8 +239,9 @@
        padding: 1rem 3.9rem 1rem 3.5rem
   .design //ДИЗАЙН ПРОЕКТ
     margin-bottom: 0
+    &__section-title
+      margin-bottom: 1.5rem
   .section-title
-    margin-bottom: 1.5rem
     &__subtitle--design  
       font-size: 1.25rem  
       width: 90%
@@ -243,18 +249,43 @@
       margin-top: 0.5rem;
       line-height: 1.4
   .team  //НАША КОМАНДА
+    &__card
+      max-width: 25.41rem
     &__section-title
       &__subtitle
         font-size: 1.25rem
+  .card
+    &__image
+      overflow: hidden
+      text-align: center
+      width: 25.41rem
+      height: 30rem
+      & img
+        width: 25.41rem
+        height: 30rem !important
+        object-fit: cover
+    .feature
+      &__card  
+        max-width: 19.5rem  
+        padding-top: 1.9rem
+        margin-top: -7rem
+        &__title
+          font-size: 1.5rem
+        &__subtitle
+          font-size: 1.5rem
+        &__experience
+          padding: 1.3rem
+          & strong
+            font-size: 1.08rem
   .footer //ПОДВАЛ
-    margin-top: -13.4rem
+    margin-top: -12.8rem
     display: flex
     &__container
       display: flex
       flex-direction: column
     &__title
       font-size: 1.6rem
-      margin-bottom: 4.7rem
+      margin-bottom: 4.5rem
     &__wrap
       margin-top: 0
       background-color: $dark
@@ -271,7 +302,7 @@
         &-full-width
           margin-bottom: 0.7rem
     &__policy
-      margin-bottom: 5.5rem     
+      margin-bottom: 5.5rem   
     &__button
       font-size: 1.25rem
       padding: 1.4rem 10.7rem
@@ -295,6 +326,8 @@
      & img
        width: 16px
        height: 16px
+  .policy__label--center
+    justify-content: start     
     
    
         
