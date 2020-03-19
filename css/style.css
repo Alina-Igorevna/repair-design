@@ -1110,10 +1110,15 @@ img {
 .client {
   padding-bottom: 19rem;
   margin-bottom: 8.5rem; }
+  .client__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; }
   .client__card {
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
-    max-width: 26.857rem; }
+    max-width: 26.857rem;
+    height: 100%; }
   .client__section-title {
     margin-bottom: 1.85rem; }
     .client__section-title__subtitle {
@@ -1337,6 +1342,10 @@ img {
 @media screen and (max-width: 1300px) {
   html {
     font-size: 12px; } }
+
+@media screen and (max-width: 1113px) {
+  .feedback__card__label {
+    bottom: 0; } }
 
 @media screen and (max-width: 991px) {
   .row {
