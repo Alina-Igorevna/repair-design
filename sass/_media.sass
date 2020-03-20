@@ -180,7 +180,7 @@
       &::placeholder 
         font-size: 1.5rem
         color: $light 
-      &#user-name
+      &#controlUserName
         margin-bottom: 5.5rem
         padding: 0.9rem 0 0 0
     &__form
@@ -255,32 +255,32 @@
   .team  //НАША КОМАНДА
     &__card
       max-width: 25.41rem
+      &__image
+        overflow: hidden
+        text-align: center
+        width: 25.41rem
+        height: 30rem
+        & img
+          width: 25.41rem
+          height: 30rem !important
+          object-fit: cover
     &__section-title
       &__subtitle
         font-size: 1.25rem
-  .card
-    &__image
-      overflow: hidden
-      text-align: center
-      width: 25.41rem
-      height: 30rem
-      & img
-        width: 25.41rem
-        height: 30rem !important
-        object-fit: cover
-    .feature
-      &__card  
-        max-width: 19.5rem  
-        padding-top: 1.9rem
-        margin-top: -7rem
-        &__title
-          font-size: 1.5rem
-        &__subtitle
-          font-size: 1.5rem
-        &__experience
-          padding: 1.3rem
-          & strong
-            font-size: 1.08rem
+    
+  .feature
+    &__card  
+      max-width: 19.5rem  
+      padding-top: 1.9rem
+      margin-top: -7rem
+      &__title
+        font-size: 1.5rem
+      &__subtitle
+        font-size: 1.5rem
+      &__experience
+        padding: 1.3rem
+        & strong
+          font-size: 1.08rem
   .footer //ПОДВАЛ
     margin-top: -12.8rem
     display: flex

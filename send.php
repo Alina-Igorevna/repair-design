@@ -1,8 +1,8 @@
 <?php
 
-$userName = $_POST['userName'];
-$usereMail = $_POST['userEmail'];
-$userPhone = $_POST['userPhone'];
+$userName = $_POST['modalUserName'];
+$usereMail = $_POST['modalUserEmail'];
+$userPhone = $_POST['modalUserPhone'];
 
 
 
@@ -34,8 +34,13 @@ try {
     $mail->Subject = 'Новая заявка с сайта';
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${usereMail}";
 
-    $mail->send();
-    header('Location: thahks.html');
+    if ($mail->send()) {
+      echo "ok";
+    } else {
+      echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    }
+    
+    
 } catch (Exception $e) {
-    echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+  echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }

@@ -10,17 +10,17 @@
   <title>Repair Design</title>
 </head>
 <body>
-   <header class="header">
+   <header  class="header">
      <div class="container">
        <div class="menu">
-         <div class="logo"><a href="#" class="menu__logo">Repair Design Project</a></div>
+         <div class="logo"><a href="#start" class="menu__logo">Repair Design Project</a></div>
          <nav class="nav menu__nav">
-           <a href="#" class="nav__item">Главная</a>
-           <a href="#" class="nav__item">Проекты</a>
+           <a href="#start" class="nav__item">Главная</a>
+           <a href="#projects" class="nav__item">Проекты</a>
            <a href="#" class="nav__item">Замер</a>
-           <a href="#" class="nav__item">Команда</a>
-           <a href="#" class="nav__item">Отзывы</a>
-           <a href="#" class="nav__item">Контакты</a>
+           <a href="#team" class="nav__item">Команда</a>
+           <a href="#client" class="nav__item">Отзывы</a>
+           <a href="#contacts" class="nav__item">Контакты</a>
          </nav>
          <!-- /.nav -->
          <div class="contacts menu__contacts">
@@ -34,7 +34,7 @@
      <!-- /.container -->
    </header>
    <main>
-     <section class="hero">
+     <section id="start" class="hero">
        <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
        </div>
@@ -52,7 +52,7 @@
       <a href="#" class="hero__sсroll-down wow bounce">листайте вниз</a>
      </section>
      <!-- /.hero -->
-     <section class="section section--dark projects">
+     <section id="projects" class="section section--dark projects">
        <div class="container">
         <div class="row">
           <div class="col-45 projects__col-45 wow fadeInLeft">
@@ -206,23 +206,23 @@
          <!-- /.control__video video -->
          <p class="control__text wow fadeInDown">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
          <!-- ФОРМА ЗАЯВКИ -->
-         <form action="#" class="form control__form">
+         <form action="send.php" method="POST" class="form control__form">
 
           <div class="control__input-group">
-            <label for="user-name" class="label label--dark form__label control__label">Имя</label>
-            <input type="text" name="userName" class="input form__input input--dark control__input" id="user-name" placeholder="Как вас зовут:">
+            <label for="controlName" class="label label--dark form__label control__label">Имя</label>
+            <input type="text" name="controlUserName" class="input form__input input--dark control__input" id="controlName" placeholder="Как вас зовут:">
           </div>
  
           <div class="control__input-group">
-            <label for="user-phone" class="label label--dark  form__label control__label">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input input--dark  control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="controlPhone" class="label label--dark  form__label control__label">Телефон</label>
+            <input type="tel" name="controlUserPhone" class="input form__input input--dark  control__input" id="controlPhone" placeholder="Ваш номер телефона:">
           </div>
  
           <button class="button button--primary control__button wow heartBeat" data-wow-delay="4s">Отправить</button>
 
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="control__policy-checkbox" class="policy__checkbox" checked>
-            <label for="control__policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="controlPpolicyCheckbox" id="controlCheckbox" class="policy__checkbox" checked>
+            <label for="controlCheckbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
         </form>
@@ -661,7 +661,7 @@
        <!-- /.container -->
      </section>
      <!-- /.sixsteps -->
-     <section class="section team">
+     <section id="team" class="section team">
       <div class="container">
         <div class="section-title team__section-title">
           <h2 class="section-title__heading section-title__heading--light">Наша команда</h2>
@@ -680,8 +680,8 @@
          <div class="col-22 team__col-22 team__col-22--left">
            <div class="card team__card">
             <img src="img/idea.svg" alt="icon" class="card__icon team__card__icon">
-             <div class="card__image">
-               <img src="img/Alexey.jpg" alt="Алексей" class="card__image">
+             <div class="team__card__image">
+               <img src="img/Alexey.jpg" alt="Алексей" class="team__card__image">
              </div>
              <!-- /.card__image-wrap -->
              <div class="feature feature__card">
@@ -701,8 +701,8 @@
          <div class="col-22 team__col-22">
           <div class="card team__card">
            <img src="img/write.svg" alt="icon" class="card__icon team__card__icon">
-            <div class="card__image">
-              <img src="img/Alisa.jpg" alt="Алиса" class="card__image">
+            <div class="team__card__image">
+              <img src="img/Alisa.jpg" alt="Алиса" class="team__card__image">
             </div>
             <!-- /.card__image-wrap -->
             <div class="feature feature__card">
@@ -722,8 +722,8 @@
         <div class="col-22 team__col-22 team__col-22--right">
           <div class="card team__card">
            <img src="img/portfolio.svg" alt="icon" class="card__icon team__card__icon">
-            <div class="card__image">
-              <img src="img/David.jpg" alt="Алексей" class="card__image">
+            <div class="team__card__image">
+              <img src="img/David.jpg" alt="Алексей" class="team__card__image">
             </div>
             <!-- /.card__image-wrap -->
             <div class="feature feature__card">
@@ -747,7 +747,7 @@
       <!-- /.containet -->
     </section>
     <!-- /.section team -->
-    <section class="section client">
+    <section id="client" class="section client">
       <div class="container">
         <div class="section-title client__section-title">
           <h2 class="section-title__heading">Наши клиенты</h2>
@@ -834,31 +834,31 @@
     </section>
     <!-- /.section client -->
    </main>
-   <footer class="footer section--dark">
+   <footer id="contacts" class="footer section--dark">
      <div class="container footer__container">
        <div class="footer__wrap">
          <h3 class="footer__title">Остались вопросы?</h3>
-        <form action="#" class="form footer__form">
+        <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label label--light form__label">Имя</label>
-            <input type="text" name="userName" class="input form__input input--light footer__input" id="user-name" placeholder="Как вас зовут:">
+            <label for="footerName" class="label label--light form__label">Имя</label>
+            <input type="text" name="footerUserName" class="input form__input input--light footer__input" id="footerName" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
           
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label label--light form__label">Телефон</label>
-            <input type="tel" name="userPhone" class="input form__input input--light footer__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <label for="footerPhone" class="label label--light form__label">Телефон</label>
+            <input type="tel" name="footerUserPhone" class="input form__input input--light footer__input" id="footerPhone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
           
           <div class="input-group footer__input-group footer__input-group-full-width">
-            <label for="user-question" class="label label--light form__label">Вопрос</label>
-            <input type="text" name="userText"  class="input form__input input--light footer__input" id="user-question" placeholder="Я хочу спросить:">
+            <label for="footerQuestion" class="label label--light form__label">Вопрос</label>
+            <input type="text" name="footerUserQuestion"  class="input form__input input--light footer__input" id="footerQuestion" placeholder="Я хочу спросить:">
           </div>
           <!-- /.input-group footer__input-group -->
           <div class="policy footer__policy">
-            <input type="checkbox" name="policy-checkbox" id="footer__policy-checkbox" class="policy__checkbox" checked>
-            <label for="footer__policy-checkbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
+            <input type="checkbox" name="footerPolicyCheckbox" id="footerCheckbox" class="policy__checkbox" checked>
+            <label for="footerCheckbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
           <button class="button--primary footer__button button">Отправить</button>
@@ -884,14 +884,14 @@
      <div class="footer__menu">
        <div class="container">
         <div class="menu">
-          <div class="logo"><a href="#" class="menu__logo">Repair Design Project</a></div>
+          <div class="logo"><a href="#start" class="menu__logo">Repair Design Project</a></div>
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
+            <a href="#start" class="nav__item">Главная</a>
+            <a href="#projects" class="nav__item">Проекты</a>
             <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#team" class="nav__item">Команда</a>
+            <a href="#client" class="nav__item">Отзывы</a>
+            <a href="#contacts" class="nav__item">Контакты</a>
           </nav>
           <!-- /.nav -->
           <div class="contacts menu__contacts">
@@ -913,26 +913,26 @@
        <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
        <form action="send.php" method="POST" class="form modal__form">
          <div class="input-group modal__input-group">
-          <label for="user-name" class="label label--light form__label">Имя</label>
-          <input type="text" name="userName" class="input form__input input--light modal__input" id="user-name" placeholder="Как вас зовут:">
+          <label for="modalName" class="label label--light form__label">Имя</label>
+          <input type="text" name="modalUserName" class="input form__input input--light modal__input" id="modalName" placeholder="Как вас зовут:">
          </div>
          <!-- /.input-group modal__input-group -->
          
          <div class="input-group modal__input-group">
-          <label for="user-phone" class="label label--light form__label">Телефон</label>
-          <input type="tel" name="userPhone" class="input form__input input--light modal__input" id="user-phone" placeholder="Ваш номер телефона:">
+          <label for="modalPhone" class="label label--light form__label">Телефон</label>
+          <input type="tel" name="modalUserPhone" class="input form__input input--light modal__input" id="modalPhone" placeholder="Ваш номер телефона:">
          </div>
          <!-- /.input-group modal__input-group -->
          
          <div class="input-group modal__input-group">
-          <label for="user-email" class="label label--light form__label">Email</label>
-          <input type="email" name="userEmail" class="input form__input input--light modal__input" id="user-email" placeholder="Ваш email">
+          <label for="modalEmail" class="label label--light form__label">Email</label>
+          <input type="email" name="modalUserEmail" class="input form__input input--light modal__input" id="modalEmail" placeholder="Ваш email">
          </div>
          <!-- /.input-group modal__input-group -->
 
          <div class="policy modal__policy">
-           <input type="checkbox" name="policy-checkbox" id="modal__policy-checkbox" class="policy__checkbox" checked>
-           <label for="modal__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+           <input type="checkbox" name="modalPolicyCheckbox" id="modalCheckbox" class="policy__checkbox" checked>
+           <label for="modalCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
          </div>
          <!-- /.policy -->
          <button class="button--primary modal__button">Отправить заявку</button>
@@ -942,6 +942,13 @@
      <!-- /.modal__dialog -->
    </div>
    <!-- /.modal -->
+   <!-- <div class="modal-thanks">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">ВАША ЗАЯВКА ПРИНЯТА</h3>
+    </div>
+  </div> --> 
+  <!-- /.modal-thanks -->
    <a href="#" class="scrollup">Наверх</a>
    <script src="https://api-maps.yandex.ru/2.1/?apikey=282a492c-110d-422a-9223-a8e012e9fd30&lang=ru_RU" type="text/javascript">
    </script>

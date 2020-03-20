@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", (event) =>{
 */
 
 $(document).ready(function () {
+
   //МОДАЛЬНОЕ ОКНО
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
@@ -173,35 +174,49 @@ $(document).ready(function () {
     $('.modal__form').validate({
       errorClass: "invalid",
       rules: {
-        userName: {
+        modalUserName: {
           required: true,
           minlength: 2,
           maxlength: 15
         }, //поле должно быть обязательное
-        userPhone: {
+        modalUserPhone: {
           required: true,
           minlength: 17
         }, 
-        userEmail: {
+        modalUserEmail: {
           required: true,
           email: true
-        }
+        },
+        modalPolicyCheckbox: "required"
       },
       // сообщения об шибке
       messages: {
-        userName: {
+        modalUserName: {
           required: "Заполните поле",
           minlength: "Имя не короче двух символов",
           maxlength: "Имя не больше 15 символов"
         }, 
-        userPhone: {
+        modalUserPhone: {
           required: "Заполните поле",
           minlength: "Введите полный номер"
         },
-        userEmail: {
+        modalUserEmail: {
           required: "Заполните поле",
           email: "Введите в формате: name@domain.com"
-        }
+        },
+        modalPolicyCheckbox: "Ознакомьтесь с обработкой данных"
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "./send.php",
+          data: $(form).serialize(), //преобразуем данные из формы в одну строку
+          success: function (response) {
+            alert('форма отправлена');
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+          }
+        });
       }
     });
 
@@ -209,27 +224,29 @@ $(document).ready(function () {
     $('.control__form').validate({
       errorClass: "invalid",
       rules: {
-        userName: {
+        controlUserName: {
           required: true,
           minlength: 2,
           maxlength: 15
         }, //поле должно быть обязательное
-        userPhone: {
+        controlUserPhone: {
           required: true,
           minlength: 17
-        }        
+        },
+        controlPpolicyCheckbox: "required"        
       },
       // сообщения об шибке
       messages: {
-        userName: {
+        controlUserName: {
           required: "Заполните поле",
           minlength: "Имя не короче двух символов",
           maxlength: "Имя не больше 15 символов"
         }, 
-        userPhone: {
+        controlUserPhone: {
           required: "Заполните поле",
           minlength: "Введите полный номер"
         },
+        controlPpolicyCheckbox: "Ознакомьтесь с обработкой данных"
       }
     });
 
@@ -237,29 +254,31 @@ $(document).ready(function () {
     $('.footer__form').validate({
       errorClass: "invalid",
       rules: {
-        userName: {
+        footerUserName: {
           required: true,
           minlength: 2,
           maxlength: 15
         }, //поле должно быть обязательное
-        userPhone: {
+        footerUserPhone: {
           required: true,
           minlength: 17
         }, 
-        userText: "required"
+        footerUserQuestion: "required",
+        footerPolicyCheckbox: "required"
       },
       // сообщения об шибке
       messages: {
-        userName: {
+        footerUserName: {
           required: "Заполните поле",
           minlength: "Имя не короче двух символов",
           maxlength: "Имя не больше 15 символов"
         }, 
-        userPhone: {
+        footerUserPhone: {
           required: "Заполните поле",
           minlength: "Введите полный номер"
         },
-        userText: "Заполните поле"
+        footerUserQuestion: "Заполните поле",
+        footerPolicyCheckbox: "Ознакомьтесь с обработкой данных"
       }
     });
 
@@ -304,6 +323,20 @@ $(document).ready(function () {
           .add(myPlacemark);
   });
 
+ //ПЛАВНЫЙ СКРОЛЛ К ЯКОРЮ
+  const anchors = document.querySelectorAll('a[href*="#"]')
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      
+      const blockID = anchor.getAttribute('href').substr(1)
+      
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    })
+  }
 //КОНЕЦ JS
 });
 
