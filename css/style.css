@@ -890,6 +890,90 @@ img {
   .card__pricetag--types {
     padding: 1.214rem 2.6rem; }
 
+.measurement {
+  background: url("../img/Measurement.png") no-repeat left; }
+  .measurement__col-55 {
+    position: relative;
+    height: 46.07rem; }
+  .measurement__col-45 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .measurement__form-wrap {
+    margin-top: 6.7rem;
+    margin-left: 4rem;
+    background-color: #131313;
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    padding: 2.4rem 3.5rem 1.98rem;
+    color: #fff; }
+  .measurement__service {
+    position: absolute; }
+    .measurement__service-one {
+      margin-top: 8rem;
+      margin-left: 18rem; }
+    .measurement__service-two {
+      margin-top: 16rem;
+      margin-left: 23rem; }
+    .measurement__service-three {
+      margin-top: 27.5rem;
+      margin-left: 25rem; }
+    .measurement__service-four {
+      margin-top: 39rem;
+      margin-left: 20.5rem; }
+      .measurement__service-four span {
+        max-width: 18.28rem; }
+
+.service {
+  display: flex;
+  align-items: center; }
+  .service__number {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.28rem;
+    color: #fff; }
+    .service__number-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      background-color: #e3b873; }
+  .service__text {
+    font-family: 'Futura Medium', cursive;
+    font-size: 1.28rem;
+    line-height: 1.5rem;
+    color: #363636;
+    max-width: 26rem; }
+
+.saving {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .saving__text {
+    font-family: 'Futura Demi', cursive;
+    color: #e3b873;
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+    font-size: 1.42rem;
+    max-width: 22.71rem; }
+  .saving__image {
+    margin-right: 1.82rem; }
+
+.moneybox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.14rem;
+  height: 5.14rem;
+  border-radius: 50%;
+  background-color: #e3b873; }
+  .moneybox__image {
+    width: 40px;
+    height: 33px; }
+
 .design {
   margin-bottom: -35rem; }
 
@@ -1320,8 +1404,8 @@ img {
     display: flex;
     flex-direction: column;
     margin-bottom: 3.2rem; }
-  .modal__input:last-of-type {
-    margin-bottom: 0.1rem; }
+    .modal__input-group--last {
+      margin-bottom: 0.1rem; }
   .modal__policy {
     margin-bottom: 2.7rem;
     font-size: 1.15rem; }
@@ -1329,6 +1413,7 @@ img {
     align-self: flex-end;
     padding: 19px 46px;
     border: none;
+    border-radius: 0;
     text-transform: uppercase;
     font-family: 'Futura Demi', cursive;
     font-size: 0.93rem; }
@@ -1382,6 +1467,8 @@ img {
       text-align: center; }
   .types__card {
     margin-bottom: 6.2rem; }
+  .measurement {
+    display: none; }
   .design {
     background-color: #131313;
     margin-bottom: 0; }

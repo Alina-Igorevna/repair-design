@@ -170,117 +170,75 @@ $(document).ready(function () {
     
     
     //ВАЛИДАЦИЯ ФОРМЫ
-    //Модальное окно
-    $('.modal__form').validate({
-      errorClass: "invalid",
-      rules: {
-        modalUserName: {
-          required: true,
-          minlength: 2,
-          maxlength: 15
-        }, //поле должно быть обязательное
-        modalUserPhone: {
-          required: true,
-          minlength: 17
-        }, 
-        modalUserEmail: {
-          required: true,
-          email: true
-        },
-        modalPolicyCheckbox: "required"
-      },
-      // сообщения об шибке
-      messages: {
-        modalUserName: {
-          required: "Заполните поле",
-          minlength: "Имя не короче двух символов",
-          maxlength: "Имя не больше 15 символов"
-        }, 
-        modalUserPhone: {
-          required: "Заполните поле",
-          minlength: "Введите полный номер"
-        },
-        modalUserEmail: {
-          required: "Заполните поле",
-          email: "Введите в формате: name@domain.com"
-        },
-        modalPolicyCheckbox: "Ознакомьтесь с обработкой данных"
-      },
-      submitHandler: function(form) {
-        $.ajax({
-          type: "POST",
-          url: "./send.php",
-          data: $(form).serialize(), //преобразуем данные из формы в одну строку
-          success: function (response) {
-            alert('форма отправлена');
-            $(form)[0].reset();
-            modal.removeClass('modal--visible');
-          }
-        });
-      }
-    });
+    var formsClass = [
+      ".modal__form",
+      ".measurement__form",
+      ".control__form",
+      ".footer__form"
+    ];
 
-    //видео контроль
-    $('.control__form').validate({
-      errorClass: "invalid",
-      rules: {
-        controlUserName: {
-          required: true,
-          minlength: 2,
-          maxlength: 15
-        }, //поле должно быть обязательное
-        controlUserPhone: {
-          required: true,
-          minlength: 17
-        },
-        controlPpolicyCheckbox: "required"        
-      },
-      // сообщения об шибке
-      messages: {
-        controlUserName: {
-          required: "Заполните поле",
-          minlength: "Имя не короче двух символов",
-          maxlength: "Имя не больше 15 символов"
-        }, 
-        controlUserPhone: {
-          required: "Заполните поле",
-          minlength: "Введите полный номер"
-        },
-        controlPpolicyCheckbox: "Ознакомьтесь с обработкой данных"
-      }
-    });
+    for (var i = 0; i<formsClass.length; i++) {
+      formValidale(formsClass[i])
+    }
 
-    //футер
-    $('.footer__form').validate({
-      errorClass: "invalid",
-      rules: {
-        footerUserName: {
-          required: true,
-          minlength: 2,
-          maxlength: 15
-        }, //поле должно быть обязательное
-        footerUserPhone: {
-          required: true,
-          minlength: 17
-        }, 
-        footerUserQuestion: "required",
-        footerPolicyCheckbox: "required"
-      },
-      // сообщения об шибке
-      messages: {
-        footerUserName: {
-          required: "Заполните поле",
-          minlength: "Имя не короче двух символов",
-          maxlength: "Имя не больше 15 символов"
-        }, 
-        footerUserPhone: {
-          required: "Заполните поле",
-          minlength: "Введите полный номер"
+    function formValidale(form) {
+      $(form).validate({
+        errorClass: "invalid",
+        rules: {
+          UserName: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          }, //поле должно быть обязательное
+          UserPhone: {
+            required: true,
+            minlength: 17
+          }, 
+          UserEmail: {
+            required: true,
+            email: true
+          },
+          UserQuestion: "required",
+          PolicyCheckbox: "required"
         },
-        footerUserQuestion: "Заполните поле",
-        footerPolicyCheckbox: "Ознакомьтесь с обработкой данных"
-      }
-    });
+        // сообщения об шибке
+        messages: {
+          UserName: {
+            required: "Заполните поле",
+            minlength: "Имя не короче двух символов",
+            maxlength: "Имя не больше 15 символов"
+          }, 
+          UserPhone: {
+            required: "Заполните поле",
+            minlength: "Введите полный номер"
+          },
+          UserEmail: {
+            required: "Заполните поле",
+            email: "Введите в формате: name@domain.com"
+          },
+          UserQuestion: "Заполните поле",
+          PolicyCheckbox: "Ознакомьтесь с обработкой данных"
+        }
+      });
+    };  
+   
+
+
+      // submitHandler: function(form) {
+      //   $.ajax({
+      //     type: "POST",
+      //     url: "./send.php",
+      //     data: $(form).serialize(), //преобразуем данные из формы в одну строку
+      //     success: function (response) {
+      //       alert('форма отправлена');
+      //       $(form)[0].reset();
+      //       modal.removeClass('modal--visible');
+      //     }
+      //   });
+      // }
+    // });
+
+    
 
     //МАСКА ДЛЯ НОМЕРА ТЕЛЕФОНА 
     $('[type=tel]').mask('+7(000) 000-00-00');

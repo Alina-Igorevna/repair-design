@@ -1,8 +1,12 @@
 <?php
 
-$userName = $_POST['modalUserName'];
-$usereMail = $_POST['modalUserEmail'];
-$userPhone = $_POST['modalUserPhone'];
+$formName = $_POST['nameForm'];
+$userName =  $_POST['UserName'];
+$usereMail = $_POST['UserEmail'];
+$userPhone = $_POST['UserPhone'];
+$userQuestion = $_POST['UserQuestion'];
+
+
 
 
 
@@ -32,8 +36,18 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${usereMail}";
 
+    if ($formName == 'modal_Form'){
+      $mail->Body    = "Пользователь заказал звонок. Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${usereMail}";
+    }
+    else if($formName == 'control_Form'){ 
+      $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}";
+    } 
+    else if($formName == 'measurement_Form'){ 
+      $mail->Body    = "Пользователь желает вызвать замерщика. Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${usereMail}";
+    } else 
+    {$mail->Body   = "Поступил вопрос от пользователя. Имя пользователя: ${userName}, его телефон: ${userPhone}. Его сообщение: ${userQuestion}";}
+    
     if ($mail->send()) {
       echo "ok";
     } else {
