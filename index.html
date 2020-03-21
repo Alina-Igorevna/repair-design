@@ -208,12 +208,12 @@
          <!-- ФОРМА ЗАЯВКИ -->
          <form action="send.php" method="POST" class="form control__form">
 
-          <div class="control__input-group">
+          <div class="control__input-group input-group-invalid">
             <label for="controlName" class="label label--dark form__label control__label">Имя</label>
             <input type="text" name="UserName" class="input form__input input--dark control__input" id="controlName" placeholder="Как вас зовут:">
           </div>
  
-          <div class="control__input-group">
+          <div class="control__input-group input-group-invalid">
             <label for="controlPhone" class="label label--dark  form__label control__label">Телефон</label>
             <input type="tel" name="UserPhone" class="input form__input input--dark  control__input" id="controlPhone" placeholder="Ваш номер телефона:">
           </div>
@@ -221,7 +221,7 @@
  
           <button class="button button--primary control__button wow heartBeat" data-wow-delay="4s">Отправить</button>
 
-          <div class="policy control__policy">
+          <div class="policy control__policy policy-invalid--center">
             <input type="checkbox" name="PolicyCheckbox" id="controlCheckbox" class="policy__checkbox" checked>
             <label for="controlCheckbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
@@ -387,26 +387,26 @@
            <div class="measurement__form-wrap">
             <h3 class="modal__title">Оставьте заявку на бесплатный выезд замерщика</h3>
             <form action="send.php" method="POST" class="form measurement__form">
-              <div class="input-group modal__input-group">
+              <div class="input-group modal__input-group input-group-invalid">
                <label for="measurementName" class="label label--light form__label">Имя</label>
                <input type="text" name="UserName" class="input form__input input--light modal__input" id="measurementName" placeholder="Как вас зовут:">
               </div>
               <!-- /.input-group modal__input-group -->
               
-              <div class="input-group modal__input-group">
+              <div class="input-group modal__input-group input-group-invalid">
                <label for="measurementPhone" class="label label--light form__label">Телефон</label>
                <input type="tel" name="UserPhone" class="input form__input input--light modal__input" id="measurementPhone" placeholder="Ваш номер телефона:">
               </div>
               <!-- /.input-group measurement__input-group -->
               
-              <div class="input-group modal__input-group modal__input-group--last">
+              <div class="input-group modal__input-group modal__input-group--last input-group-invalid">
                <label for="measurementEmail" class="label label--light form__label">Email</label>
                <input type="email" name="UserEmail" class="input form__input input--light modal__input" id="measurementEmail" placeholder="Ваш email">
               </div>
               <!-- /.input-group measurement__input-group -->
               <input type="hidden" name="nameForm" value="measurement_Form">
      
-              <div class="policy modal__policy">
+              <div class="policy modal__policy policy-invalid--left">
                 <input type="checkbox" name="PolicyCheckbox" id="measurementCheckbox" class="policy__checkbox" checked>
                 <label for="measurementCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
               </div>
@@ -418,8 +418,8 @@
            <!-- /.measurement__form-wrap -->
            <div class="saving">
              <div class="saving__image">
-              <div class="moneybox ">
-                <img class="moneybox__image" src="img/Moneybox.svg" alt="копилка">
+              <div class="moneybox">
+                <img class="moneybox__image animation" src="img/Moneybox.svg" alt="копилка">
                </div>
              </div>
              <span class="saving__text">Это поможет сэкономить 10 - 20% от стоимости материалов</span>
@@ -925,25 +925,25 @@
        <div class="footer__wrap">
          <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" method="POST" class="form footer__form">
-          <div class="input-group footer__input-group">
+          <div class="input-group footer__input-group input-group-invalid">
             <label for="footerName" class="label label--light form__label">Имя</label>
             <input type="text" name="UserName" class="input form__input input--light footer__input" id="footerName" placeholder="Как вас зовут:">
           </div>
           <!-- /.input-group footer__input-group -->
           
-          <div class="input-group footer__input-group">
+          <div class="input-group footer__input-group input-group-invalid">
             <label for="footerPhone" class="label label--light form__label">Телефон</label>
             <input type="tel" name="UserPhone" class="input form__input input--light footer__input" id="footerPhone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.input-group footer__input-group -->
           
-          <div class="input-group footer__input-group footer__input-group-full-width">
+          <div class="input-group footer__input-group footer__input-group-full-width input-group-invalid">
             <label for="footerQuestion" class="label label--light form__label">Вопрос</label>
             <input type="text" name="UserQuestion"  class="input form__input input--light footer__input" id="footerQuestion" placeholder="Я хочу спросить:">
           </div>
           <input type="hidden" name="nameForm" value="formt_Form">
           <!-- /.input-group footer__input-group -->
-          <div class="policy footer__policy">
+          <div class="policy footer__policy policy-invalid--center">
             <input type="checkbox" name="PolicyCheckbox" id="footerCheckbox" class="policy__checkbox" checked>
             <label for="footerCheckbox" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
@@ -999,25 +999,25 @@
        <button class="modal__close"></button>
        <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
        <form action="send.php" method="POST" class="form modal__form">
-         <div class="input-group modal__input-group">
+         <div class="input-group modal__input-group input-group-invalid">
           <label for="modalName" class="label label--light form__label">Имя</label>
           <input type="text" name="UserName" class="input form__input input--light modal__input" id="modalName" placeholder="Как вас зовут:">
          </div>
          <!-- /.input-group modal__input-group -->
          
-         <div class="input-group modal__input-group">
+         <div class="input-group modal__input-group input-group-invalid">
           <label for="modalPhone" class="label label--light form__label">Телефон</label>
           <input type="tel" name="UserPhone" class="input form__input input--light modal__input" id="modalPhone" placeholder="Ваш номер телефона:">
         </div>
          <!-- /.input-group modal__input-group -->
          
-         <div class="input-group modal__input-group modal__input-group--last">
+         <div class="input-group modal__input-group modal__input-group--last input-group-invalid">
           <label for="modalEmail" class="label label--light form__label">Email</label>
           <input type="email" name="UserEmail" class="input form__input input--light modal__input" id="modalEmail" placeholder="Ваш email">
          </div>
          <!-- /.input-group modal__input-group -->
 
-         <div class="policy modal__policy">
+         <div class="policy modal__policy policy-invalid--left">
            <input type="checkbox" name="PolicyCheckbox" id="modalCheckbox" class="policy__checkbox" checked>
            <label for="modalCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
          </div>
@@ -1030,12 +1030,14 @@
      <!-- /.modal__dialog -->
    </div>
    <!-- /.modal -->
-   <!-- <div class="modal-thanks">
-    <div class="modal__dialog">
-      <button class="modal__close"></button>
-      <h3 class="modal__title">ВАША ЗАЯВКА ПРИНЯТА</h3>
+   <div class="modal-thanks">
+    <div class="modal-thanks__dialog">
+      <button class="modal-thanks__close"></button>
+      <h3 class="modal-thanks__title">ВАША ЗАЯВКА ПРИНЯТА</h3>
+      <span class="modal-thanks__text">Подпишитесь на нашу группу в вконтакте</span>
+        <a href="#" class="modal-thanks__link"><img src="img/vkontakte.svg" alt="mail" class=""></a>
     </div>
-  </div> --> 
+  </div> 
   <!-- /.modal-thanks -->
    <a href="#" class="scrollup">Наверх</a>
    <script src="https://api-maps.yandex.ru/2.1/?apikey=282a492c-110d-422a-9223-a8e012e9fd30&lang=ru_RU" type="text/javascript">

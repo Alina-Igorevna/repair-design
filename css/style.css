@@ -443,13 +443,23 @@ template {
     margin-right: 12px;
     transform: rotate(180deg); }
 
-label.invalid {
+.input-group-invalid div {
   color: tomato;
   position: absolute;
   margin-top: 4rem; }
 
 input.invalid {
   border-bottom: 1px solid tomato; }
+
+.policy-invalid--left div.invalid {
+  color: tomato;
+  position: absolute;
+  margin-top: 1.5rem; }
+
+.policy-invalid--center div.invalid {
+  color: tomato;
+  position: absolute;
+  margin-top: 1.5rem; }
 
 .container {
   width: 85%;
@@ -550,6 +560,22 @@ img {
         height: 2px;
         background-color: #e3b873;
         margin: 0 10px; }
+
+@-webkit-keyframes animationMoneybox {
+  0%, 50%, 100% {
+    transform: rotate(0deg); }
+  10%, 30% {
+    transform: rotate(-10deg); }
+  20%, 40% {
+    transform: rotate(10deg); } }
+
+@keyframes animationMoneybox {
+  0%, 50%, 100% {
+    transform: rotate(0deg); }
+  10%, 30% {
+    transform: rotate(-10deg); }
+  20%, 40% {
+    transform: rotate(10deg); } }
 
 .header {
   position: fixed;
@@ -829,7 +855,10 @@ img {
 
 .control__policy {
   flex-basis: 100%;
-  margin-top: 1.2rem; }
+  margin-top: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .control__policy-label {
     justify-content: center;
     font-size: 1.14rem; }
@@ -973,6 +1002,17 @@ img {
   .moneybox__image {
     width: 40px;
     height: 33px; }
+
+.shake-animation {
+  transform-origin: center center;
+  -webkit-animation-name: animationMoneybox;
+  animation-name: animationMoneybox;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
 
 .design {
   margin-bottom: -35rem; }
@@ -1310,10 +1350,13 @@ img {
     margin-bottom: 4rem; }
     .footer__input-group-full-width {
       flex-basis: 100%;
-      margin-bottom: 2.8rem; }
+      margin-bottom: 3.8rem; }
   .footer__policy {
     flex-basis: 100%;
-    margin-bottom: 3.5rem; }
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .footer__button {
     margin: auto;
     font-size: 1.07rem;
@@ -1354,6 +1397,54 @@ img {
     line-height: 1.5;
     margin-bottom: 1.5rem;
     text-decoration: none; }
+
+.modal-thanks {
+  opacity: 0;
+  position: fixed;
+  visibility: hidden;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal-thanks__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    background: #181818 url("../img/bg-lines.svg") no-repeat center;
+    padding: 2.4rem 3.5rem 1.98rem;
+    color: #fff; }
+  .modal-thanks__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal-thanks__title {
+    font-family: 'Yeseva One', cursive;
+    font-weight: 400;
+    font-size: 1.357rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem;
+    line-height: 1.4; }
+  .modal-thanks__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; }
+  .modal-thanks__text {
+    display: inline-block;
+    margin-bottom: 1rem; }
 
 .modal {
   opacity: 0;

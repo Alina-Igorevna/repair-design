@@ -44,29 +44,44 @@ $(document).ready(function () {
   //МОДАЛЬНОЕ ОКНО
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close');
+      closeBtn = $('.modal__close'),
+      modalThanks = $('.modal-thanks'),
+      modalThanksClose =  $('.modal-thanks__close');
      
-  var pressESC = function (event) {
+  var pressESC = function (event,modalForm) {
     if(event.keyCode === 27){ // Если код кнопки 27(ESC) закрываем модальную форму
       $(document).unbind('keyup', pressESC);
-      modal.removeClass('modal--visible');
+      modalForm.removeClass('modal--visible');
     }
   }
   
-  var switchModal = function (){
-    modal.toggleClass('modal--visible');
+  var switchModal = function (modalForm){
+    modalForm.toggleClass('modal--visible');
     // если modal Имеет класс modal--visible добавляем событие keyup
-    if(modal.hasClass('modal--visible')){
-      $(document).on('keyup', pressESC);
+    if(modalForm.hasClass('modal--visible')){
+      $(document).on('keyup', function(event){
+        pressESC(event,modalForm);
+      });
     }
     else{ // иначе удаляем событие
-      $(document).unbind('keyup', pressESC);
+      $(document).unbind('keyup', function(event){
+        pressESC(event,modalForm);
+      });
     }
   };
   
-  modalBtn.on('click', switchModal);  
+  modalBtn.on('click', function(){
+    switchModal(modal);
+ });
 
-  closeBtn.on('click', switchModal);
+  closeBtn.on('click', function(){
+    switchModal(modal);
+ });
+
+  modalThanksClose.on('click',function(){
+     switchModal(modalThanks);
+  });
+
 
   modal.on('click', function(event){
     var target = event.target;
@@ -74,6 +89,15 @@ $(document).ready(function () {
       modal.removeClass('modal--visible'); 
     }
   });
+
+  modalThanks.on('click', function(event){
+    console.log('modalThanks');
+    var target = event.target;
+    if(target.classList.contains('modal-thanks')){
+      modalThanks.removeClass('modal--visible'); 
+    }
+  });
+
 
   //СЛАЙДЕР ПРОЕКТЫ
   var mySwiper = new Swiper ('.projects__swiper-container', {
@@ -184,6 +208,7 @@ $(document).ready(function () {
     function formValidale(form) {
       $(form).validate({
         errorClass: "invalid",
+        errorElement: "div",
         rules: {
           UserName: {
             required: true,
@@ -218,25 +243,28 @@ $(document).ready(function () {
           },
           UserQuestion: "Заполните поле",
           PolicyCheckbox: "Ознакомьтесь с обработкой данных"
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: "POST",
+            url: "./send.php",
+            data: $(form).serialize(), //преобразуем данные из формы в одну строку
+            success: function (response) {
+              $(form)[0].reset();
+              if(form.classList.contains('modal__form')) modal.removeClass('modal--visible');
+              switchModal(modalThanks);
+            }
+          });
         }
       });
+
+      
     };  
    
 
 
-      // submitHandler: function(form) {
-      //   $.ajax({
-      //     type: "POST",
-      //     url: "./send.php",
-      //     data: $(form).serialize(), //преобразуем данные из формы в одну строку
-      //     success: function (response) {
-      //       alert('форма отправлена');
-      //       $(form)[0].reset();
-      //       modal.removeClass('modal--visible');
-      //     }
-      //   });
-      // }
-    // });
+     
+ 
 
     
 
@@ -295,6 +323,18 @@ $(document).ready(function () {
       })
     })
   }
+// АНИМАЦИЯ ПОСЛЕ СКРОЛЛА ДО НЕЕ
+var element_point = $('.animation').offset().top;
+var element_animated = false;
+var animate_delay = 100;
+$(window).scroll(function() {
+  if (!element_animated && $(window).scrollTop() + window.innerHeight > element_point + animate_delay) {
+    element_animated = true;
+    $('.animation').addClass('shake-animation');
+  }
+});
+
+
 //КОНЕЦ JS
 });
 

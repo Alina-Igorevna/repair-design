@@ -1,8 +1,8 @@
-.modal 
+.modal-thanks
   opacity: 0
-  visibility: hidden
   position: fixed
-  z-index: 199
+  visibility: hidden
+  z-index: 200
   left: 0
   top: 0
   bottom: 0
@@ -13,9 +13,6 @@
   display: flex
   align-items: center
   justify-content: center  
-  &--visible
-    opacity: 1
-    visibility: visible
   &__dialog
     position: relative
     max-width: 36.36rem
@@ -40,31 +37,11 @@
     margin: 0
     margin-bottom: 2rem
     line-height: 1.4
-  &__form
-    display: flex 
-    flex-direction: column 
-  &__input
-    &-group
-      display: flex 
-      flex-direction: column 
-      margin-bottom: 3.2rem
-      &--last
-        margin-bottom: 0.1rem
-  &__policy
-    margin-bottom: 2.7rem 
-    font-size: 1.15rem
-  &__button
-    align-self: flex-end 
-    padding: 19px 46px
-    border: none
-    border-radius: 0
-    text-transform: uppercase
-    font-family: 'Futura Demi', cursive
-    font-size: 0.93rem   
-
-
- 
-  
-
-
-  
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+  &__text    
+    display: inline-block
+    margin-bottom: 1rem
