@@ -120,6 +120,37 @@ $(document).ready(function () {
   bullets.css('left', prev.width() + 27);
   // КОНЕЦ СЛАЙДЕРА
 
+  //СЛАЙДЕР "РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ"
+  var SwiperFantasy = new Swiper ('.fantasy__swiper-container', {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.fantasy__swiper-button-next',
+      prevEl: '.fantasy__swiper-button-prev',
+    }
+  });
+
+  var fantasyList = document.querySelector('.fantasy__list');
+  var fantasyItems = document.querySelectorAll('.fantasy__item');
+
+  fantasyList.addEventListener('click', function(event){
+    var target = event.target;
+    if (target && (target.classList.contains('fantasy__list') || target.parentNode.classList.contains('fantasy__list'))) {
+      fantasyItems.forEach(function(item){
+        item.classList.remove('fantasy__item--active');
+      });
+
+      fantasyItems.forEach(function(item, i){
+        if(target === item){
+          target.classList.add('fantasy__item--active');
+          SwiperFantasy.slideTo(i);
+        }
+      });
+      
+    };
+  });
+
+  //КОНЕЦ СЛАЙДЕРА
+
   //СЛАЙДЕР 6 ШАГОВ
   var SwiperStep = new Swiper ('.sixsteps__swiper-container', {
     spaceBetween: 30,
