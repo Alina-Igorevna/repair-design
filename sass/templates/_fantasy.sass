@@ -1,6 +1,7 @@
 .fantasy
   background: #131313 url(../img/fantasy_bg.png) no-repeat center / cover
   max-height: 61.7rem
+  margin-bottom: 5.5rem
   &__section-title
     margin-top: 4.5rem
     margin-bottom: 2.2rem
@@ -31,23 +32,34 @@
     &-container
       &-wrap
         margin-top: -13rem
-        position: absolute
+        // position: absolute
     &-button
       &-prev, &-next
-        display: none    
+        visibility: hidden   
 
 .photo
   &-column       
     &__left
       margin-top: 5rem
-      // margin-left: -0.5rem
       &__top
         margin-bottom: 2.5rem
+        & img
+          object-fit: cover
+          height: 39rem
+      &__bottom
+        & img
+          object-fit: cover
+          height: 25rem  
     &__right
-      // margin-left: 28rem 
-      // margin-top: -13rem 
       &__top
         margin-bottom: 2.5rem
+        & img
+          object-fit: cover
+          height: 20rem
+      &__bottom 
+        & img
+          object-fit: cover
+          height: 44rem 
 
       
 

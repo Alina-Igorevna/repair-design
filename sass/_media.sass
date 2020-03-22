@@ -60,6 +60,20 @@
       margin-bottom: 6.2rem 
   .measurement //ЗАМЕР    
     display: none      
+  .fantasy //ВАШИ ФАНТАЗИИ
+    &__list-wrap
+      display: none
+    &__swiper
+      &-button
+        &-prev, &-next  
+          visibility: visible
+          width: 20px
+          background: url(../img/arrow-next.svg) no-repeat center
+          height: 20px
+          margin-left: 4rem
+          margin-top: 2rem
+    .swiper-slide-computer
+      display: none    
   .design //ДИЗАЙН ПРОЕКТ
     background-color: $dark 
     margin-bottom: 0

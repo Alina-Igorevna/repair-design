@@ -1053,7 +1053,8 @@ img {
 
 .fantasy {
   background: #131313 url(../img/fantasy_bg.png) no-repeat center/cover;
-  max-height: 61.7rem; }
+  max-height: 61.7rem;
+  margin-bottom: 5.5rem; }
   .fantasy__section-title {
     margin-top: 4.5rem;
     margin-bottom: 2.2rem; }
@@ -1076,18 +1077,34 @@ img {
   .fantasy__photo-column {
     flex-basis: 48%; }
   .fantasy__swiper-container-wrap {
-    margin-top: -13rem;
-    position: absolute; }
+    margin-top: -13rem; }
   .fantasy__swiper-button-prev, .fantasy__swiper-button-next {
-    display: none; }
+    visibility: hidden; }
 
 .photo-column__left {
   margin-top: 5rem; }
   .photo-column__left__top {
     margin-bottom: 2.5rem; }
+    .photo-column__left__top img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      height: 39rem; }
+  .photo-column__left__bottom img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 25rem; }
 
 .photo-column__right__top {
   margin-bottom: 2.5rem; }
+  .photo-column__right__top img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 20rem; }
+
+.photo-column__right__bottom img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 44rem; }
 
 .design {
   margin-bottom: -35rem; }
@@ -1634,6 +1651,17 @@ img {
   .types__card {
     margin-bottom: 6.2rem; }
   .measurement {
+    display: none; }
+  .fantasy__list-wrap {
+    display: none; }
+  .fantasy__swiper-button-prev, .fantasy__swiper-button-next {
+    visibility: visible;
+    width: 20px;
+    background: url(../img/arrow-next.svg) no-repeat center;
+    height: 20px;
+    margin-left: 4rem;
+    margin-top: 2rem; }
+  .fantasy .swiper-slide-computer {
     display: none; }
   .design {
     background-color: #131313;
