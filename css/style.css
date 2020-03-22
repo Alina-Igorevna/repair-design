@@ -919,41 +919,71 @@ img {
   .card__pricetag--types {
     padding: 1.214rem 2.6rem; }
 
-.measurement {
-  background: url("../img/Measurement.png") no-repeat left; }
-  .measurement__col-55 {
+.measurement__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto; }
+
+.measurement__image img {
+  width: 100%; }
+
+.measurement__col-55 {
+  position: relative;
+  display: flex; }
+
+.measurement__col-45 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.measurement__form {
+  display: flex;
+  flex-direction: column; }
+  .measurement__form-wrap {
+    align-items: center;
+    margin-top: 7.6rem;
+    margin-left: 3.1rem;
+    margin-bottom: 2.6rem;
+    background-color: #131313;
     position: relative;
-    height: 46.07rem; }
-  .measurement__col-45 {
+    max-width: 36rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    padding: 1.9rem 3.5rem 1.98rem;
+    color: #fff; }
+  .measurement__form__title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
-  .measurement__form-wrap {
-    margin-top: 6.7rem;
-    margin-left: 4rem;
-    background-color: #131313;
-    position: relative;
-    max-width: 36.36rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
-    padding: 2.4rem 3.5rem 1.98rem;
-    color: #fff; }
-  .measurement__service {
-    position: absolute; }
-    .measurement__service-one {
-      margin-top: 8rem;
-      margin-left: 18rem; }
-    .measurement__service-two {
-      margin-top: 16rem;
-      margin-left: 23rem; }
-    .measurement__service-three {
-      margin-top: 27.5rem;
-      margin-left: 25rem; }
-    .measurement__service-four {
-      margin-top: 39rem;
-      margin-left: 20.5rem; }
-      .measurement__service-four span {
-        max-width: 18.28rem; }
+    text-align: center;
+    margin: 0;
+    margin-bottom: 3rem; }
+    .measurement__form__title h3 {
+      font-family: 'Futura Demi', cursive;
+      font-weight: 400;
+      font-size: 1.42rem;
+      max-width: 21.21rem;
+      margin: 0; }
+
+.measurement__service {
+  position: absolute;
+  z-index: 90; }
+  .measurement__service-wrap {
+    position: absolute;
+    width: 100%; }
+  .measurement__service-one {
+    transform: translate(25.4rem, 8.4rem); }
+  .measurement__service-two {
+    transform: translate(30.8rem, 16.3rem); }
+  .measurement__service-three {
+    transform: translate(32.6rem, 27.8rem); }
+  .measurement__service-four {
+    transform: translate(27.9rem, 39.3rem); }
+    .measurement__service-four span {
+      max-width: 18.28rem; }
+
+.measurement__button {
+  align-self: flex-end;
+  padding: 1.3rem 2.6rem; }
 
 .service {
   display: flex;
@@ -981,7 +1011,7 @@ img {
 .saving {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  margin-left: 5.3rem; }
   .saving__text {
     font-family: 'Futura Demi', cursive;
     color: #e3b873;

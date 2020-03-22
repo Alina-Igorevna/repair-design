@@ -349,72 +349,77 @@
      </section>
      <!-- /.section types -->
      <section class="section measurement">
-      <div class="container">
+      <div class="container measurement__container">
        <div class="row">
          <div class="col-55 measurement__col-55">
-          <div class="service measurement__service measurement__service-one">
-            <div class="service__number-wrap">
-              <span class="service__number">01</span>
+           <div class="measurement__image"><img src="img/Measurement.png" alt="Фон"></div>
+           <div class="measurement__service-wrap">
+            <div class="service measurement__service measurement__service-one">
+              <div class="service__number-wrap">
+                <span class="service__number">01</span>
+              </div>
+              <span class="service__text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</span>
             </div>
-            <span class="service__text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</span>
-          </div>
-          <!-- /.measurement__step -->
-          <div class="service measurement__service measurement__service-two">
-            <div class="service__number-wrap">
-              <span class="service__number">02</span>
+            <!-- /.measurement__step -->
+            <div class="service measurement__service measurement__service-two">
+              <div class="service__number-wrap">
+                <span class="service__number">02</span>
+              </div>
+              <span class="service__text">Бесплатный замер</span>
             </div>
-            <span class="service__text">Бесплатный замер</span>
-          </div>
-          <!-- /.measurement__step -->
-          <div class="service measurement__service measurement__service-three">
-            <div class="service__number-wrap">
-              <span class="service__number">03</span>
+            <!-- /.measurement__step -->
+            <div class="service measurement__service measurement__service-three">
+              <div class="service__number-wrap">
+                <span class="service__number">03</span>
+              </div>
+              <span class="service__text">Бесплатная консультация</span>
             </div>
-            <span class="service__text">Бесплатная консультация</span>
-          </div>
-          <!-- /.measurement__step -->
-          <div class="service measurement__service measurement__service-four">
-            <div class="service__number-wrap">
-              <span class="service__number">0</span>
+            <!-- /.measurement__step -->
+            <div class="service measurement__service measurement__service-four">
+              <div class="service__number-wrap">
+                <span class="service__number">04</span>
+              </div>
+              <span class="service__text">Получите смету расходов и сроки вашего будущего ремонта</span>
             </div>
-            <span class="service__text">Получите смету расходов и сроки вашего будущего ремонта</span>
-          </div>
-          <!-- /.measurement__step -->
-          
+            <!-- /.measurement__step -->
+           </div>
+           <!-- /.measurement__service-wrap -->
          </div>
          <!-- /.col-65 measurement__col-65 -->
          <div class="col-45 measurement__col-45">
            <div class="measurement__form-wrap">
-            <h3 class="modal__title">Оставьте заявку на бесплатный выезд замерщика</h3>
-            <form action="send.php" method="POST" class="form measurement__form">
-              <div class="input-group modal__input-group input-group-invalid">
-               <label for="measurementName" class="label label--light form__label">Имя</label>
-               <input type="text" name="UserName" class="input form__input input--light modal__input" id="measurementName" placeholder="Как вас зовут:">
-              </div>
-              <!-- /.input-group modal__input-group -->
-              
-              <div class="input-group modal__input-group input-group-invalid">
-               <label for="measurementPhone" class="label label--light form__label">Телефон</label>
-               <input type="tel" name="UserPhone" class="input form__input input--light modal__input" id="measurementPhone" placeholder="Ваш номер телефона:">
-              </div>
-              <!-- /.input-group measurement__input-group -->
-              
-              <div class="input-group modal__input-group modal__input-group--last input-group-invalid">
-               <label for="measurementEmail" class="label label--light form__label">Email</label>
-               <input type="email" name="UserEmail" class="input form__input input--light modal__input" id="measurementEmail" placeholder="Ваш email">
-              </div>
-              <!-- /.input-group measurement__input-group -->
-              <input type="hidden" name="nameForm" value="measurement_Form">
-     
-              <div class="policy modal__policy policy-invalid--left">
-                <input type="checkbox" name="PolicyCheckbox" id="measurementCheckbox" class="policy__checkbox" checked>
-                <label for="measurementCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
-              </div>
-              <!-- /.policy -->
-              <button class="button button--primary measurement__button">Вызвать замерщика</button>
-            </form>
-            <!-- /.form measurement__form -->
-           </div>
+             <div class="measurement__form__title">
+              <h3>Оставьте заявку на бесплатный выезд замерщика</h3>
+            </div>
+              <form action="send.php" method="POST" class="form measurement__form">
+                <div class="input-group modal__input-group input-group-invalid">
+                 <label for="measurementName" class="label label--light form__label">Имя</label>
+                 <input type="text" name="UserName" class="input form__input input--light modal__input" id="measurementName" placeholder="Как вас зовут:">
+                </div>
+                <!-- /.input-group modal__input-group -->
+                
+                <div class="input-group modal__input-group input-group-invalid">
+                 <label for="measurementPhone" class="label label--light form__label">Телефон</label>
+                 <input type="tel" name="UserPhone" class="input form__input input--light modal__input" id="measurementPhone" placeholder="Ваш номер телефона:">
+                </div>
+                <!-- /.input-group measurement__input-group -->
+                
+                <div class="input-group modal__input-group modal__input-group--last input-group-invalid">
+                 <label for="measurementEmail" class="label label--light form__label">Email</label>
+                 <input type="email" name="UserEmail" class="input form__input input--light modal__input" id="measurementEmail" placeholder="Ваш email">
+                </div>
+                <!-- /.input-group measurement__input-group -->
+                <input type="hidden" name="nameForm" value="measurement_Form">
+       
+                <div class="policy modal__policy policy-invalid--left">
+                  <input type="checkbox" name="PolicyCheckbox" id="measurementCheckbox" class="policy__checkbox" checked>
+                  <label for="measurementCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <!-- /.policy -->
+                <button class="button button--primary measurement__button">Вызвать замерщика</button>
+              </form>
+              <!-- /.form measurement__form -->
+            </div>
            <!-- /.measurement__form-wrap -->
            <div class="saving">
              <div class="saving__image">
