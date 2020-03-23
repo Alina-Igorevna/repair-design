@@ -40,28 +40,42 @@ document.addEventListener("DOMContentLoaded", (event) =>{
 */
 
 $(document).ready(function () {
+  
+
 
   //МОДАЛЬНОЕ ОКНО
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
       modalThanks = $('.modal-thanks'),
-      modalThanksClose =  $('.modal-thanks__close');
+      modalThanksClose =  $('.modal-thanks__close'),
+      costBtn = $('.hero__button-cost'),
+      requestBtn = $('.hero__button-request'),
+      heroSсrollDown = $('.hero__sсroll-down'),
+      projectsCol45 = $('.projects__col-45'),
+      projectsCol55 = $('.projects__col-55');
      
   var pressESC = function (event,modalForm) {
     if(event.keyCode === 27){ // Если код кнопки 27(ESC) закрываем модальную форму
       $(document).unbind('keyup', pressESC);
       modalForm.removeClass('modal--visible');
+      resetForm(modalForm);
     }
   }
+  function resetForm(modalForm){
+    var ff = $(modalForm).find('form');
+    ff[0].reset();
+  };
   
   var switchModal = function (modalForm){
+
     modalForm.toggleClass('modal--visible');
     // если modal Имеет класс modal--visible добавляем событие keyup
     if(modalForm.hasClass('modal--visible')){
       $(document).on('keyup', function(event){
         pressESC(event,modalForm);
       });
+      resetForm(modalForm);
     }
     else{ // иначе удаляем событие
       $(document).unbind('keyup', function(event){
@@ -71,12 +85,23 @@ $(document).ready(function () {
   };
   
   modalBtn.on('click', function(){
+    // console.log(modal);
     switchModal(modal);
- });
+  });
+
+  costBtn.on('click', function(){
+    // console.log(modal);
+    switchModal(modal);
+  });
+
+  requestBtn.on('click', function(){
+    // console.log(modal);
+    switchModal(modal);
+  });
 
   closeBtn.on('click', function(){
     switchModal(modal);
- });
+  });
 
   modalThanksClose.on('click',function(){
      switchModal(modalThanks);
@@ -129,21 +154,11 @@ $(document).ready(function () {
       prevEl: '.fantasy__swiper-button-prev',
     }
   });
-  // var next = $('.projects__swiper-button-next');
-  // var prev = $('.projects__swiper-button-prev');
-  // var bullets = $('.projects__swiper-pagination');
-
-  // next.css('left', prev.width() + 27 + bullets.width() + 27 )
-  // bullets.css('left', prev.width() + 27);
   // КОНЕЦ СЛАЙДЕРА
 
   //СЛАЙДЕР "РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ"
   var SwiperFantasy = new Swiper ('.fantasy__swiper-container', {
     spaceBetween: 30,
-    // navigation: {
-    //   nextEl: '.fantasy__swiper-button-next',
-    //   prevEl: '.fantasy__swiper-button-prev',
-    // }
   });
 
   var fantasyList = document.querySelector('.fantasy__list');
@@ -151,7 +166,7 @@ $(document).ready(function () {
 
   fantasyList.addEventListener('click', function(event){
     var target = event.target;
-    if (target && (target.classList.contains('fantasy__list') || target.parentNode.classList.contains('fantasy__list'))) {
+    if (target && (target.classList.contains('fantasy__item') || target.parentNode.classList.contains('fantasy__item'))) {
       fantasyItems.forEach(function(item){
         item.classList.remove('fantasy__item--active');
       });
@@ -165,7 +180,6 @@ $(document).ready(function () {
       
     };
   });
-
   //КОНЕЦ СЛАЙДЕРА
 
   //СЛАЙДЕР 6 ШАГОВ
@@ -217,7 +231,24 @@ $(document).ready(function () {
     });
   });
   // КОНЕЦ СЛАЙДЕРА
-
+    $(window).resize(function(){
+      if(window.matchMedia('(max-width: 991px)').matches){
+         heroSсrollDown.removeClass('wow');
+         heroSсrollDown.removeClass('bounce');
+         projectsCol45.removeClass('wow');
+         projectsCol45.removeClass('fadeInLeft');
+         projectsCol55.removeClass('wow');
+         projectsCol55.removeClass('fadeInLeft');
+      }
+      else{
+        heroSсrollDown.addClass('wow');
+        heroSсrollDown.addClass('bounce');
+        projectsCol45.addClass('wow');
+         projectsCol45.addClass('fadeInLeft');
+         projectsCol55.addClass('wow');
+         projectsCol55.addClass('fadeInLeft');
+      }
+    });
 // СТРЕЛКА НАВЕРХ
     $(window).scroll(function(){
       if(window.matchMedia('(min-width: 992px)').matches){
@@ -229,6 +260,10 @@ $(document).ready(function () {
       }else {
         $('.scrollup').fadeOut();
       };
+
+      // if(window.matchMedia('(max-width: 992px)').matches){
+        
+      // };
     });
 
     $('.scrollup').click(function(){
@@ -236,6 +271,7 @@ $(document).ready(function () {
       return false;
     }); 
     // КОНЕЦ СТРЕЛКИ НАВЕРХ
+
     
     //АКТИВАЦИЯ СКРИПТА ДЛЯ АНИМАЦИИ
     new WOW().init();    
@@ -257,6 +293,12 @@ $(document).ready(function () {
       $(form).validate({
         errorClass: "invalid",
         errorElement: "div",
+        errorPlacement: function (error, element) {
+          if (element.attr("type") == "checkbox") {
+              return element.next('label').append(error);
+          }
+           error.insertAfter($(element));
+         },
         rules: {
           UserName: {
             required: true,
@@ -305,8 +347,6 @@ $(document).ready(function () {
           });
         }
       });
-
-      
     };  
    
 
