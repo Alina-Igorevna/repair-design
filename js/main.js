@@ -120,13 +120,30 @@ $(document).ready(function () {
   bullets.css('left', prev.width() + 27);
   // КОНЕЦ СЛАЙДЕРА
 
-  //СЛАЙДЕР "РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ"
-  var SwiperFantasy = new Swiper ('.fantasy__swiper-container', {
+  //СЛАЙДЕР "РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ" МОБИЛЬНАЯ ВЕРСИЯ
+  var SwiperFantasyMobil = new Swiper ('.fantasy__swiper-container-mobil', {
+    loop: true,
     spaceBetween: 30,
     navigation: {
       nextEl: '.fantasy__swiper-button-next',
       prevEl: '.fantasy__swiper-button-prev',
     }
+  });
+  // var next = $('.projects__swiper-button-next');
+  // var prev = $('.projects__swiper-button-prev');
+  // var bullets = $('.projects__swiper-pagination');
+
+  // next.css('left', prev.width() + 27 + bullets.width() + 27 )
+  // bullets.css('left', prev.width() + 27);
+  // КОНЕЦ СЛАЙДЕРА
+
+  //СЛАЙДЕР "РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ"
+  var SwiperFantasy = new Swiper ('.fantasy__swiper-container', {
+    spaceBetween: 30,
+    // navigation: {
+    //   nextEl: '.fantasy__swiper-button-next',
+    //   prevEl: '.fantasy__swiper-button-prev',
+    // }
   });
 
   var fantasyList = document.querySelector('.fantasy__list');

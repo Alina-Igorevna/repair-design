@@ -1,18 +1,115 @@
+@media screen and ( max-width: 1370px)
+  .measurement
+    &__service
+      &-wrap
+        margin-left: -1rem
+
+@media screen and ( max-width: 1350px)
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -1rem
+        margin-left: -2rem   
+      &-four  
+        transform: translate(32rem, 38.5rem)     
+
+@media screen and ( max-width: 1300px)
+  html
+    font-size: 12px  
+  .measurement
+    &__service
+      &-wrap
+        margin-top: 1rem
+        margin-left: 2rem 
+      &-three  
+        transform: translate(36.6rem, 29.5rem)     
+      &-four  
+        transform: translate(32rem, 41rem)             
+
+@media screen and ( max-width: 1250px)
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -0.5rem
+        margin-left: 1rem   
+      &-one
+        transform: translate(29.7rem, 9rem)
+      &-two  
+        transform: translate(35rem, 17.8rem)  
+
 @media screen and ( max-width: 1200px)
   html
     font-size: 12px
   .nav
     &__item
       margin-right: 1rem
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -1rem
+        margin-left: -1rem     
 
+@media screen and ( max-width: 1170px)
+  .measurement
+    &__service
+      &-two  
+        transform: translate(35rem, 17.5rem)
+      &-three  
+        transform: translate(36.6rem, 28.5rem)
+      &-four  
+        transform: translate(32rem, 39.3rem)   
 
-@media screen and ( max-width: 1300px)
-  html
-    font-size: 12px      
+@media screen and ( max-width: 1140px)
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -1.5rem
+        margin-left: -2rem  
+
+@media screen and ( max-width: 1120px)
+  .measurement
+    &__service
+      &-two  
+        transform: translate(35rem, 17rem)
+      &-three  
+        transform: translate(36.6rem, 28rem)
+      &-four  
+        transform: translate(32rem, 37.5rem)                 
 
 @media screen and ( max-width: 1113px)
   .feedback__card__label
     bottom: 0   
+
+@media screen and ( max-width: 1080px)
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -2rem
+        margin-left: -3.5rem      
+
+@media screen and ( max-width: 1050px)
+  .measurement
+    &__service
+      &-two  
+        transform: translate(35rem, 16.5rem)
+      &-three  
+        transform: translate(36.6rem, 26.5rem)
+      &-four  
+        transform: translate(32rem, 36rem)    
+
+@media screen and ( max-width: 1030px)
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -3rem
+        margin-left: -5rem      
+
+@media screen and ( max-width: 992px)
+  .measurement
+    &__service
+      &-wrap
+        margin-top: -3rem
+        margin-left: -6rem                   
 
 @media screen and ( max-width: 991px)
   .row
@@ -34,7 +131,11 @@
       display: none
     &__content
       margin-left: 0 
+    &__sсroll-down
+      display: none  
   .projects //ЗАВЕРШЕННЫЕ ПРОЕКТЫ
+    padding-bottom: 0
+    padding-top: 0
     &__swiper-slide
       &__wrap  
         width: 95%   
@@ -55,28 +156,101 @@
         &--img
           padding-top: 3rem
           text-align: center
+  .control //ВИДЕО КОНТРОЛЬ
+    background: $dark
+    margin-top: -1px
+    padding-bottom: 7.5rem
+    margin-bottom: 6.5rem
+    padding-top: 3.5rem   
+    &__label
+      font-size: 1.25rem 
+      color: rgba($light, 0.5) 
+    &__policy
+      justify-content: start  
+      margin-top: 2.4rem
+      margin-left: -1rem
+    &__input
+      font-size: 1.5rem
+      color: $light  
+      &::placeholder 
+        font-size: 1.5rem
+        color: $light 
+      &#controlName
+        margin-bottom: 5.5rem
+        padding: 0.9rem 0 0 0
+      &-group  
+        // margin-bottom: 5.5rem
+    &__form
+      flex-direction: column    
+    &__text
+      color: $light
+      font-size: 1.16rem
+      line-height: 2rem
+      margin-bottom: 2.3rem
+      &::before
+       margin-bottom: 1.3rem
+    &__section
+      &-title
+        margin-top: 0rem
+        margin-bottom: 3.3rem 
+    &__button  
+      order: 5 
+      padding: 1.4rem 10.8rem
+      font-size: 1.25rem
+      position: absolute
+      margin-top: 22rem 
+    &__policy-label 
+      justify-content: start  
+      font-size: 1.33rem
+      color: $light
+  .section-title     
+    &__text p
+      font-size: 1.25rem
+      max-width: 25.5rem  
+      line-height: 1.6rem
+    &__image
+      margin-top: 1.5rem  
+    &__heading
+      font-size: 1.83rem  
+      &--primary
+        margin-bottom: 1.9rem               
   .types //ВИДЫ РЕМОНТА
     &__card
       margin-bottom: 6.2rem 
   .measurement //ЗАМЕР    
     display: none      
   .fantasy //ВАШИ ФАНТАЗИИ
+    background: $light
+    margin-bottom: 0
+    padding: 0
+    &__col-40
+      width: 100%
+    &__container
+      position: absolute
+      margin-top: -15rem  
+      z-index: 97
+    &__section-title__heading
+      text-align: center
+      font-size: 1.83rem  
     &__list-wrap
       display: none
     &__swiper
-      &-button
-        &-prev, &-next  
+      &-slide
+        &-mobil
           visibility: visible
-          width: 20px
-          background: url(../img/arrow-next.svg) no-repeat center
-          height: 20px
-          margin-left: 4rem
-          margin-top: 2rem
-    .swiper-slide-computer
-      display: none    
+        &-computer
+          display: none  
+      &-container
+        &-mobil
+          &__image 
+            display: flex
+            align-items: center
+            justify-content: center  
   .design //ДИЗАЙН ПРОЕКТ
     background-color: $dark 
     margin-bottom: 0
+    padding-top: 15rem
+    margin-top: -10rem
     &__section-title
       color: $light
     &__card
@@ -120,6 +294,7 @@
       display: none
     &__wrap
       margin-top: -12rem
+      background-color: $dark
       
  
   
@@ -145,11 +320,9 @@
   .hero //Первый блок
     padding-top: 0
     &__title
-      margin-top: 3rem
-    &__sсroll-down
-      display: none
+      margin-top: 6rem
     &__content
-      padding: 0 1.28rem
+      padding: 0 1.4rem
       margin-left: 0
     &__text
       font-size: 1.5rem
@@ -157,12 +330,12 @@
       max-width: 26.5rem  
       line-height: 2rem
     &__button
-      min-width: 98%
+      min-width: 100%
       margin-bottom: 1.85rem
       padding: 20px
       font-size: 13px
   .projects //ЗАВЕРШЕННЫЕ ПРОЕКТЫ
-    padding-top: 0
+    padding-top: 0.5rem
     padding-bottom: 0
     &__section-title 
       width: 90%  
@@ -186,61 +359,19 @@
     margin-top: -1px
     padding-bottom: 7.5rem
     margin-bottom: 6.5rem
-    padding-top: 4rem
-    &__label
-      font-size: 1.25rem 
-      color: rgba($light, 0.5) 
-    &__input
-      font-size: 1.5rem
-      color: $light  
-      &::placeholder 
-        font-size: 1.5rem
-        color: $light 
-      &#controlUserName
-        margin-bottom: 5.5rem
-        padding: 0.9rem 0 0 0
-    &__form
-      flex-direction: column
-    &__text
-      color: $light
-      font-size: 1.16rem
-      line-height: 2rem
-      margin-bottom: 2.3rem
-      &::before
-       margin-bottom: 1.3rem
+    padding-top: 3.5rem
     &__video
       max-width: 28.33rem
       min-height: 17.25rem  
       background: $dark url('../img/video_img_mobil.png') no-repeat center
       margin-bottom: 2.4rem
-    &__section
-      &-title
-        margin-top: 0rem
-        margin-bottom: 3.6rem
-    &__button  
-      order: 5 
-      padding: 1.4rem 10.8rem
-      font-size: 1.25rem
-      position: absolute
-      margin-top: 22rem
-    &__policy-label 
-      justify-content: start  
-      font-size: 1.33rem
-      color: $light
   .video
     &__play
-      max-width: 20%      
-  .section-title     
-    &__text p
-      font-size: 1.25rem
-      max-width: 25.5rem  
-      line-height: 1.6rem
-    &__image
-      margin-top: 1.1rem  
-    &__heading
-      font-size: 1.83rem  
-      &--primary
-       margin-bottom: 1.9rem
+      width: 1rem
+      height: 1rem  
+      &__wrap   
+        width: 3.08rem
+        height: 3.08rem   
   .types //ВИДЫ РЕМОНТА
     &__section-title
       margin-bottom: 3rem
@@ -257,8 +388,23 @@
        padding: 1.1rem 2.5rem
       &--design 
        padding: 1rem 3.9rem 1rem 3.5rem
+  .fantasy //РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ  
+    &__col-60
+      width: 100%
+    &__section-title  
+      margin-top: 0
+      margin-bottom: 2.4rem
+    &__swiper
+      &-button
+        &__wrap
+          margin-top: -13.5rem
+          margin-left: -3rem
+      &-container-mobil
+        &__image 
+          width: 28.33rem  
   .design //ДИЗАЙН ПРОЕКТ
     margin-bottom: 0
+    padding-top: 14rem
     &__section-title
       margin-bottom: 1.5rem
   .section-title
@@ -266,24 +412,36 @@
       font-size: 1.25rem  
       width: 90%
       margin: auto
-      margin-top: 0.5rem;
       line-height: 1.4
   .team  //НАША КОМАНДА
+    &__col-22
+      margin-left: 2.5rem
     &__card
       max-width: 25.41rem
-      &__image
+      &__icon
+        margin-top: -3rem
+      &-image
         overflow: hidden
         text-align: center
-        width: 25.41rem
-        height: 30rem
+        width: 25.33rem
+        height: 29.75rem
         & img
-          width: 25.41rem
-          height: 30rem !important
+          width: 25.33rem
+          height: 29.75rem 
           object-fit: cover
+        &__one
+          & img
+            height: 30rem !important
+            object-position: 0rem -3.5rem  
+        &__two   
+          & img 
+            object-position: -2rem 0
+        &__three 
+          & img  
+            object-position: 0 0   
     &__section-title
       &__subtitle
         font-size: 1.25rem
-    
   .feature
     &__card  
       max-width: 19.5rem  
@@ -308,7 +466,6 @@
       margin-bottom: 4.5rem
     &__wrap
       margin-top: 0
-      background-color: $dark
       margin-bottom: 1.7rem
     &__form  
       display: flex
@@ -320,9 +477,11 @@
       &-group
         margin-bottom: 5rem
         &-full-width
-          margin-bottom: 0.7rem
+          margin-bottom: 1.8rem
     &__policy
-      margin-bottom: 5.5rem   
+      margin-bottom: 5.5rem 
+      justify-content: start  
+      margin-left: -1.2rem
     &__button
       font-size: 1.25rem
       padding: 1.4rem 10.7rem
@@ -351,9 +510,22 @@
     
    
         
-    
-    
-
+@media screen and ( max-width: 320px)    
+  .team
+    &__col-22
+      margin-left: 0
+    &__card
+      &__icon
+        margin-left: -1rem
+      &-image
+        width: 22.5rem
+        & img
+          width: 22.5rem
+  .footer__button, .control__button  
+    padding: 1.4rem 8rem
+  .fantasy__swiper-button__wrap  
+    width: 26rem
+   
 
         
         
@@ -371,5 +543,7 @@
       &__icon 
        margin-left: -0.1rem
        margin-top: -2.7rem  
+  
+
 
   

@@ -17,7 +17,7 @@
          <nav class="nav menu__nav">
            <a href="#start" class="nav__item">Главная</a>
            <a href="#projects" class="nav__item">Проекты</a>
-           <a href="#" class="nav__item">Замер</a>
+           <a href="#measurement" class="nav__item">Замер</a>
            <a href="#team" class="nav__item">Команда</a>
            <a href="#client" class="nav__item">Отзывы</a>
            <a href="#contacts" class="nav__item">Контакты</a>
@@ -49,7 +49,7 @@
           <!-- /.hero__buttons -->
         </div>
         <!-- /.hero__content -->
-      <a href="#" class="hero__sсroll-down wow bounce">листайте вниз</a>
+      <a href="#projects" class="hero__sсroll-down wow bounce">листайте вниз</a>
      </section>
      <!-- /.hero -->
      <section id="projects" class="section section--dark projects">
@@ -201,7 +201,9 @@
          </div>
          <!-- /.section-title -->
          <div class="control__video video">
-           <img src="img/play.svg" alt="Play" class="video__play">
+           <div class="video__play__wrap">
+            <img src="img/play.svg" alt="Play" class="video__play">
+           </div>
          </div>
          <!-- /.control__video video -->
          <p class="control__text wow fadeInDown">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
@@ -348,37 +350,28 @@
        <!-- /.container -->
      </section>
      <!-- /.section types -->
-     <section class="section measurement">
+     <section id="measurement" class="section measurement">
       <div class="container measurement__container">
        <div class="row">
          <div class="col-55 measurement__col-55">
-           <div class="measurement__image"><img src="img/Measurement.png" alt="Фон"></div>
+           <div class="measurement__image"><img src="img/Measurement_1.png" alt="Фон"></div>
            <div class="measurement__service-wrap">
             <div class="service measurement__service measurement__service-one">
-              <div class="service__number-wrap">
+              <!-- <div class="service__number-wrap">
                 <span class="service__number">01</span>
-              </div>
+              </div> -->
               <span class="service__text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</span>
             </div>
             <!-- /.measurement__step -->
             <div class="service measurement__service measurement__service-two">
-              <div class="service__number-wrap">
-                <span class="service__number">02</span>
-              </div>
               <span class="service__text">Бесплатный замер</span>
             </div>
             <!-- /.measurement__step -->
             <div class="service measurement__service measurement__service-three">
-              <div class="service__number-wrap">
-                <span class="service__number">03</span>
-              </div>
               <span class="service__text">Бесплатная консультация</span>
             </div>
             <!-- /.measurement__step -->
             <div class="service measurement__service measurement__service-four">
-              <div class="service__number-wrap">
-                <span class="service__number">04</span>
-              </div>
               <span class="service__text">Получите смету расходов и сроки вашего будущего ремонта</span>
             </div>
             <!-- /.measurement__step -->
@@ -465,8 +458,8 @@
             <!-- /.fantasy__list-wrap -->
           </div>
           <!-- /.col-40 -->
-          <div class="col-60">
-            <div class="fantasy__swiper-container-wrap swiper-slide-computer">
+          <div class="col-60 fantasy__col-60">
+            <div class="fantasy__swiper-container-wrap fantasy__swiper-slide-computer">
               <div class="swiper-container fantasy__swiper-container">
                 <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides 1 -->
@@ -750,6 +743,31 @@
               <!-- /.fantasy__swiper-container-->
             </div>
             <!-- /.fantasy__swiper-container-wrap -->
+            <div class="swiper-container fantasy__swiper-container-mobil fantasy__swiper-slide-mobil">
+              <div class="swiper-wrapper swiper-no-swiping">
+                  <!-- Слайдер 2 -->
+                  <div class="swiper-slide">
+                    <div class="fantasy__swiper-container-mobil__image">
+                      <img src="img/american_mobile.jpg" alt="Стиль">
+                    </div>
+                  </div>
+                   <!-- Слайдер 3 -->
+                   <div class="swiper-slide">
+                    <div class="fantasy__swiper-container-mobil__image">
+                      <img src="img/imperial_3.jpg" alt="Стиль">
+                    </div>
+                  </div>
+                  <!-- Конец слайдер 3 -->
+              </div>
+              <!-- Конец слайдера-->
+              <!-- Кнопки слайдера -->
+              <div class="fantasy__swiper-button__wrap">
+                <div class="fantasy__swiper-button-prev"></div>
+              <div class="fantasy__swiper-button-next"></div>
+              </div>
+              <!-- /.fantasy__swiper-button__wrap -->
+            </div>
+            <!-- /. Slider main container -->
           </div>
           <!-- /.col-60 -->
         </div>
@@ -1093,8 +1111,8 @@
          <div class="col-22 team__col-22 team__col-22--left">
            <div class="card team__card">
             <img src="img/idea.svg" alt="icon" class="card__icon team__card__icon">
-             <div class="team__card__image">
-               <img src="img/Alexey.jpg" alt="Алексей" class="team__card__image">
+             <div class="team__card-image team__card-image__one">
+               <img src="img/Alexey.jpg" alt="Алексей">
              </div>
              <!-- /.card__image-wrap -->
              <div class="feature feature__card">
@@ -1114,8 +1132,8 @@
          <div class="col-22 team__col-22">
           <div class="card team__card">
            <img src="img/write.svg" alt="icon" class="card__icon team__card__icon">
-            <div class="team__card__image">
-              <img src="img/Alisa.jpg" alt="Алиса" class="team__card__image">
+            <div class="team__card-image team__card-image__two">
+              <img src="img/Alisa.jpg" alt="Алиса">
             </div>
             <!-- /.card__image-wrap -->
             <div class="feature feature__card">
@@ -1135,8 +1153,8 @@
         <div class="col-22 team__col-22 team__col-22--right">
           <div class="card team__card">
            <img src="img/portfolio.svg" alt="icon" class="card__icon team__card__icon">
-            <div class="team__card__image">
-              <img src="img/David.jpg" alt="Алексей" class="team__card__image">
+            <div class="team__card-image team__card-image__three">
+              <img src="img/David.jpg" alt="Алексей">
             </div>
             <!-- /.card__image-wrap -->
             <div class="feature feature__card">
@@ -1302,7 +1320,7 @@
           <nav class="nav menu__nav">
             <a href="#start" class="nav__item">Главная</a>
             <a href="#projects" class="nav__item">Проекты</a>
-            <a href="#" class="nav__item">Замер</a>
+            <a href="#measurement" class="nav__item">Замер</a>
             <a href="#team" class="nav__item">Команда</a>
             <a href="#client" class="nav__item">Отзывы</a>
             <a href="#contacts" class="nav__item">Контакты</a>
