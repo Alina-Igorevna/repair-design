@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", (event) =>{
 
 $(document).ready(function () {
   
+ 
 
 
-  //МОДАЛЬНОЕ ОКНО
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
@@ -53,8 +53,26 @@ $(document).ready(function () {
       requestBtn = $('.hero__button-request'),
       heroSсrollDown = $('.hero__sсroll-down'),
       projectsCol45 = $('.projects__col-45'),
-      projectsCol55 = $('.projects__col-55');
-     
+      projectsCol55 = $('.projects__col-55'),
+      controlText = $('.control__text'),
+      controlButton = $('.control__button');
+
+
+      function setAnimate(){
+        if(window.matchMedia('(max-width: 992px)').matches){
+           heroSсrollDown.removeClass('bounce');
+           projectsCol45.removeClass('fadeInLeft');
+           projectsCol55.removeClass('fadeInRight');
+           controlText.removeClass('fadeInDown');
+           controlButton.removeClass('heartBeat');
+        }
+      };
+    
+      setAnimate();
+
+
+
+     //МОДАЛЬНОЕ ОКНО  
   var pressESC = function (event,modalForm) {
     if(event.keyCode === 27){ // Если код кнопки 27(ESC) закрываем модальную форму
       $(document).unbind('keyup', pressESC);
@@ -231,24 +249,6 @@ $(document).ready(function () {
     });
   });
   // КОНЕЦ СЛАЙДЕРА
-    $(window).resize(function(){
-      if(window.matchMedia('(max-width: 991px)').matches){
-         heroSсrollDown.removeClass('wow');
-         heroSсrollDown.removeClass('bounce');
-         projectsCol45.removeClass('wow');
-         projectsCol45.removeClass('fadeInLeft');
-         projectsCol55.removeClass('wow');
-         projectsCol55.removeClass('fadeInLeft');
-      }
-      else{
-        heroSсrollDown.addClass('wow');
-        heroSсrollDown.addClass('bounce');
-        projectsCol45.addClass('wow');
-         projectsCol45.addClass('fadeInLeft');
-         projectsCol55.addClass('wow');
-         projectsCol55.addClass('fadeInLeft');
-      }
-    });
 // СТРЕЛКА НАВЕРХ
     $(window).scroll(function(){
       if(window.matchMedia('(min-width: 992px)').matches){
