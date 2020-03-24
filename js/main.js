@@ -437,6 +437,10 @@ $(window).scroll(function() {
   function videoPlay(event) {
     event.target.playVideo();
   };
+
+
+
+
 //КОНЕЦ JS
 });
 
