@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/animate.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Repair Design</title>
 </head>
 <body>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(61235602, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61235602" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
    <header  class="header">
      <div class="container">
        <div class="menu">
@@ -25,7 +26,7 @@
          <!-- /.nav -->
          <div class="contacts menu__contacts">
            <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-           <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+           <button onclick="ym(61235602, 'reachGoal', 'button'); return true;"  class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
          </div>
          <!-- /.contacts -->
        </div>
@@ -189,248 +190,252 @@
        <!-- /.container -->
      </section>
      <!-- /.section section--dark projects -->
-     <section class="section control">
-       <div class="container">
-         <div class="section-title control__section-title">
-           <h2 class="section-title__heading section-title__heading--light">Онлайн контроль</h2>
+     <div class="block_one">
+      <section class="section control">
+        <div class="container">
+          <div class="section-title control__section-title">
+            <h2 class="section-title__heading section-title__heading--light">Онлайн контроль</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="img/video.svg" alt="video">
+            </div>
+            <!-- /.section-title__image -->
+          </div>
+          <!-- /.section-title -->
+          <div class="control__video video" id="player">
+            <script src="https://www.youtube.com/iframe_api"></script>
+            <div class="video__play__wrap">
+             <img src="img/play.svg" alt="Play" class="video__play">
+            </div>
+          </div>
+          <!-- /.control__video video -->
+          <p class="control__text wow fadeInDown">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+          <!-- ФОРМА ЗАЯВКИ -->
+          <form action="send.php" method="POST" class="form control__form">
+ 
+           <div class="control__input-group input-group-invalid">
+             <label for="controlName" class="label label--dark form__label control__label">Имя</label>
+             <input type="text" name="UserName" class="input form__input input--dark control__input" id="controlName" placeholder="Как вас зовут:">
+           </div>
+  
+           <div class="control__input-group input-group-invalid">
+             <label for="controlPhone" class="label label--dark  form__label control__label">Телефон</label>
+             <input type="tel" name="UserPhone" class="input form__input input--dark  control__input" id="controlPhone" placeholder="Ваш номер телефона:">
+           </div>
+           <input type="hidden" name="nameForm" value="control_Form">
+  
+           <button class="button button--primary control__button wow heartBeat" data-wow-delay="4s">Отправить</button>
+ 
+           <div class="policy control__policy policy-invalid--center">
+             <input type="checkbox" name="PolicyCheckbox" id="controlCheckbox" class="policy__checkbox" checked>
+             <label for="controlCheckbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+           </div>
+           <!-- /.policy -->
+         </form>
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section control -->
+      <section class="section types">
+        <div class="container">
+         <div class="section-title types__section-title">
+           <h2 class="section-title__heading">Виды ремонта</h2>
            <!-- /.section-title__heading -->
            <div class="section-title__image">
-             <img src="img/video.svg" alt="video">
+             <img src="img/types.svg" alt="repair">
            </div>
            <!-- /.section-title__image -->
          </div>
          <!-- /.section-title -->
-         <div class="control__video video">
-           <div class="video__play__wrap">
-            <img src="img/play.svg" alt="Play" class="video__play">
+         <div class="row">
+           <div class="col-32">
+             <div class="card types__card">
+               <img src="img/types_1.png" alt="Косметический ремонт" class="card__image">
+               <div class="card__text card__text--types">
+                 <h3 class="card__title">Косметический ремонт</h3>
+                 <!-- /.card_title -->
+                 <ul class="card__list">
+                   <li class="card__item">Демонтаж старых покрытий</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Поклейка обоев</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Роспись стен и потолков</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Укладка полов</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена сантехники</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена розеток и выключателей</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена дверей</li>
+                   <!-- /.card__item -->
+                 </ul>
+                 <!-- /.card__list -->
+                 <strong class="card__pricetag card__pricetag--types">
+                   от 900 руб / м<sup>2</sup> 
+                 </strong>
+                 <!-- /.card__pricetag -->
+               </div>
+               <!-- /.card__text -->
+             </div>
+             <!-- /.card -->
            </div>
+           <!-- /.col -->
+           <div class="col-32">
+             <div class="card types__card">
+               <img src="img/types_2.png" alt="Капитальный ремонт" class="card__image">
+               <div class="card__text card__text--types">
+                 <h3 class="card__title">Капитальный ремонт</h3>
+                 <!-- /.card_title -->
+                 <ul class="card__list">
+                   <li class="card__item">Демонтаж старых покрытий</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Поклейка обоев</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Роспись стен и потолков</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Укладка полов</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена сантехники</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена розеток и выключателей</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена дверей</li>
+                   <!-- /.card__item -->
+                 </ul>
+                 <!-- /.card__list -->
+                 <strong class="card__pricetag card__pricetag--types">
+                   от 1800 руб / м<sup>2</sup> 
+                 </strong>
+                 <!-- /.card__pricetag -->
+               </div>
+               <!-- /.card__text -->
+             </div>
+             <!-- /.card -->
+           </div>
+           <!-- /.col -->
+           <div class="col-32">
+             <div class="card types__card">
+               <img src="img/types_3.png" alt="Дизайнерский ремонт" class="card__image">
+               <div class="card__text card__text--types">
+                 <h3 class="card__title">Дизайнерский ремонт</h3>
+                 <!-- /.card_title -->
+                 <ul class="card__list">
+                   <li class="card__item">Демонтаж старых покрытий</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Поклейка обоев</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Роспись стен и потолков</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Укладка полов</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена сантехники</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена розеток и выключателей</li>
+                   <!-- /.card__item -->
+                   <li class="card__item">Замена дверей</li>
+                   <!-- /.card__item -->
+                 </ul>
+                 <!-- /.card__list -->
+                 <strong class="card__pricetag card__pricetag--types">
+                   от 4000 руб / м<sup>2</sup> 
+                 </strong>
+                 <!-- /.card__pricetag -->
+               </div>
+               <!-- /.card__text -->
+             </div>
+             <!-- /.card -->
+           </div>
+           <!-- /.col -->
          </div>
-         <!-- /.control__video video -->
-         <p class="control__text wow fadeInDown">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-         <!-- ФОРМА ЗАЯВКИ -->
-         <form action="send.php" method="POST" class="form control__form">
-
-          <div class="control__input-group input-group-invalid">
-            <label for="controlName" class="label label--dark form__label control__label">Имя</label>
-            <input type="text" name="UserName" class="input form__input input--dark control__input" id="controlName" placeholder="Как вас зовут:">
-          </div>
- 
-          <div class="control__input-group input-group-invalid">
-            <label for="controlPhone" class="label label--dark  form__label control__label">Телефон</label>
-            <input type="tel" name="UserPhone" class="input form__input input--dark  control__input" id="controlPhone" placeholder="Ваш номер телефона:">
-          </div>
-          <input type="hidden" name="nameForm" value="control_Form">
- 
-          <button class="button button--primary control__button wow heartBeat" data-wow-delay="4s">Отправить</button>
-
-          <div class="policy control__policy policy-invalid--center">
-            <input type="checkbox" name="PolicyCheckbox" id="controlCheckbox" class="policy__checkbox" checked>
-            <label for="controlCheckbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
-          </div>
-          <!-- /.policy -->
-        </form>
-       </div>
-       <!-- /.container -->
-     </section>
-     <!-- /.section control -->
-     <section class="section types">
-       <div class="container">
-        <div class="section-title types__section-title">
-          <h2 class="section-title__heading">Виды ремонта</h2>
-          <!-- /.section-title__heading -->
-          <div class="section-title__image">
-            <img src="img/types.svg" alt="repair">
-          </div>
-          <!-- /.section-title__image -->
+         <!-- /.row -->
         </div>
-        <!-- /.section-title -->
+        <!-- /.container -->
+      </section>
+      <!-- /.section types -->
+      <section id="measurement" class="section measurement">
+       <div class="container measurement__container">
         <div class="row">
-          <div class="col-32">
-            <div class="card types__card">
-              <img src="img/types_1.png" alt="Косметический ремонт" class="card__image">
-              <div class="card__text card__text--types">
-                <h3 class="card__title">Косметический ремонт</h3>
-                <!-- /.card_title -->
-                <ul class="card__list">
-                  <li class="card__item">Демонтаж старых покрытий</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Поклейка обоев</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Роспись стен и потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Укладка полов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена сантехники</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена розеток и выключателей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена дверей</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag card__pricetag--types">
-                  от 900 руб / м<sup>2</sup> 
-                </strong>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card__text -->
+          <div class="col-55 measurement__col-55">
+            <div class="measurement__image"><img src="img/Measurement_1.png" alt="Фон"></div>
+            <div class="measurement__service-wrap">
+             <div class="service measurement__service measurement__service-one">
+               <!-- <div class="service__number-wrap">
+                 <span class="service__number">01</span>
+               </div> -->
+               <span class="service__text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</span>
+             </div>
+             <!-- /.measurement__step -->
+             <div class="service measurement__service measurement__service-two">
+               <span class="service__text">Бесплатный замер</span>
+             </div>
+             <!-- /.measurement__step -->
+             <div class="service measurement__service measurement__service-three">
+               <span class="service__text">Бесплатная консультация</span>
+             </div>
+             <!-- /.measurement__step -->
+             <div class="service measurement__service measurement__service-four">
+               <span class="service__text">Получите смету расходов и сроки вашего будущего ремонта</span>
+             </div>
+             <!-- /.measurement__step -->
             </div>
-            <!-- /.card -->
+            <!-- /.measurement__service-wrap -->
           </div>
-          <!-- /.col -->
-          <div class="col-32">
-            <div class="card types__card">
-              <img src="img/types_2.png" alt="Капитальный ремонт" class="card__image">
-              <div class="card__text card__text--types">
-                <h3 class="card__title">Капитальный ремонт</h3>
-                <!-- /.card_title -->
-                <ul class="card__list">
-                  <li class="card__item">Демонтаж старых покрытий</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Поклейка обоев</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Роспись стен и потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Укладка полов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена сантехники</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена розеток и выключателей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена дверей</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag card__pricetag--types">
-                  от 1800 руб / м<sup>2</sup> 
-                </strong>
-                <!-- /.card__pricetag -->
+          <!-- /.col-65 measurement__col-65 -->
+          <div class="col-45 measurement__col-45">
+            <div class="measurement__form-wrap">
+              <div class="measurement__form__title">
+               <h3>Оставьте заявку на бесплатный выезд замерщика</h3>
+             </div>
+               <form action="send.php" method="POST" class="form measurement__form">
+                 <div class="input-group modal__input-group input-group-invalid">
+                  <label for="measurementName" class="label label--light form__label">Имя</label>
+                  <input type="text" name="UserName" class="input form__input input--light modal__input" id="measurementName" placeholder="Как вас зовут:">
+                 </div>
+                 <!-- /.input-group modal__input-group -->
+                 
+                 <div class="input-group modal__input-group input-group-invalid">
+                  <label for="measurementPhone" class="label label--light form__label">Телефон</label>
+                  <input type="tel" name="UserPhone" class="input form__input input--light modal__input" id="measurementPhone" placeholder="Ваш номер телефона:">
+                 </div>
+                 <!-- /.input-group measurement__input-group -->
+                 
+                 <div class="input-group modal__input-group modal__input-group--last input-group-invalid">
+                  <label for="measurementEmail" class="label label--light form__label">Email</label>
+                  <input type="email" name="UserEmail" class="input form__input input--light modal__input" id="measurementEmail" placeholder="Ваш email">
+                 </div>
+                 <!-- /.input-group measurement__input-group -->
+                 <input type="hidden" name="nameForm" value="measurement_Form">
+        
+                 <div class="policy modal__policy policy-invalid--left">
+                   <input type="checkbox" name="PolicyCheckbox" id="measurementCheckbox" class="policy__checkbox" checked>
+                   <label for="measurementCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                 </div>
+                 <!-- /.policy -->
+                 <button class="button button--primary measurement__button">Вызвать замерщика</button>
+               </form>
+               <!-- /.form measurement__form -->
+             </div>
+            <!-- /.measurement__form-wrap -->
+            <div class="saving">
+              <div class="saving__image">
+               <div class="moneybox">
+                 <img class="moneybox__image animation" src="img/Moneybox.svg" alt="копилка">
+                </div>
               </div>
-              <!-- /.card__text -->
+              <span class="saving__text">Это поможет сэкономить 10 - 20% от стоимости материалов</span>
             </div>
-            <!-- /.card -->
+            <!-- /.moneybox -->
           </div>
-          <!-- /.col -->
-          <div class="col-32">
-            <div class="card types__card">
-              <img src="img/types_3.png" alt="Дизайнерский ремонт" class="card__image">
-              <div class="card__text card__text--types">
-                <h3 class="card__title">Дизайнерский ремонт</h3>
-                <!-- /.card_title -->
-                <ul class="card__list">
-                  <li class="card__item">Демонтаж старых покрытий</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Поклейка обоев</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Роспись стен и потолков</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Укладка полов</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена сантехники</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена розеток и выключателей</li>
-                  <!-- /.card__item -->
-                  <li class="card__item">Замена дверей</li>
-                  <!-- /.card__item -->
-                </ul>
-                <!-- /.card__list -->
-                <strong class="card__pricetag card__pricetag--types">
-                  от 4000 руб / м<sup>2</sup> 
-                </strong>
-                <!-- /.card__pricetag -->
-              </div>
-              <!-- /.card__text -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
+          <!-- /.col-45 -->
         </div>
         <!-- /.row -->
        </div>
        <!-- /.container -->
      </section>
-     <!-- /.section types -->
-     <section id="measurement" class="section measurement">
-      <div class="container measurement__container">
-       <div class="row">
-         <div class="col-55 measurement__col-55">
-           <div class="measurement__image"><img src="img/Measurement_1.png" alt="Фон"></div>
-           <div class="measurement__service-wrap">
-            <div class="service measurement__service measurement__service-one">
-              <!-- <div class="service__number-wrap">
-                <span class="service__number">01</span>
-              </div> -->
-              <span class="service__text">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</span>
-            </div>
-            <!-- /.measurement__step -->
-            <div class="service measurement__service measurement__service-two">
-              <span class="service__text">Бесплатный замер</span>
-            </div>
-            <!-- /.measurement__step -->
-            <div class="service measurement__service measurement__service-three">
-              <span class="service__text">Бесплатная консультация</span>
-            </div>
-            <!-- /.measurement__step -->
-            <div class="service measurement__service measurement__service-four">
-              <span class="service__text">Получите смету расходов и сроки вашего будущего ремонта</span>
-            </div>
-            <!-- /.measurement__step -->
-           </div>
-           <!-- /.measurement__service-wrap -->
-         </div>
-         <!-- /.col-65 measurement__col-65 -->
-         <div class="col-45 measurement__col-45">
-           <div class="measurement__form-wrap">
-             <div class="measurement__form__title">
-              <h3>Оставьте заявку на бесплатный выезд замерщика</h3>
-            </div>
-              <form action="send.php" method="POST" class="form measurement__form">
-                <div class="input-group modal__input-group input-group-invalid">
-                 <label for="measurementName" class="label label--light form__label">Имя</label>
-                 <input type="text" name="UserName" class="input form__input input--light modal__input" id="measurementName" placeholder="Как вас зовут:">
-                </div>
-                <!-- /.input-group modal__input-group -->
-                
-                <div class="input-group modal__input-group input-group-invalid">
-                 <label for="measurementPhone" class="label label--light form__label">Телефон</label>
-                 <input type="tel" name="UserPhone" class="input form__input input--light modal__input" id="measurementPhone" placeholder="Ваш номер телефона:">
-                </div>
-                <!-- /.input-group measurement__input-group -->
-                
-                <div class="input-group modal__input-group modal__input-group--last input-group-invalid">
-                 <label for="measurementEmail" class="label label--light form__label">Email</label>
-                 <input type="email" name="UserEmail" class="input form__input input--light modal__input" id="measurementEmail" placeholder="Ваш email">
-                </div>
-                <!-- /.input-group measurement__input-group -->
-                <input type="hidden" name="nameForm" value="measurement_Form">
-       
-                <div class="policy modal__policy policy-invalid--left">
-                  <input type="checkbox" name="PolicyCheckbox" id="measurementCheckbox" class="policy__checkbox" checked>
-                  <label for="measurementCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
-                </div>
-                <!-- /.policy -->
-                <button class="button button--primary measurement__button">Вызвать замерщика</button>
-              </form>
-              <!-- /.form measurement__form -->
-            </div>
-           <!-- /.measurement__form-wrap -->
-           <div class="saving">
-             <div class="saving__image">
-              <div class="moneybox">
-                <img class="moneybox__image animation" src="img/Moneybox.svg" alt="копилка">
-               </div>
-             </div>
-             <span class="saving__text">Это поможет сэкономить 10 - 20% от стоимости материалов</span>
-           </div>
-           <!-- /.moneybox -->
-         </div>
-         <!-- /.col-45 -->
-       </div>
-       <!-- /.row -->
-      </div>
-      <!-- /.container -->
-    </section>
-    <!-- /.section measurement -->
+     <!-- /.section measurement -->
+     </div>
+     <!-- /.block_one -->
     <section class="section section--dark fantasy">
       <div class="container">
         <div class="row">
@@ -1092,6 +1097,7 @@
        <!-- /.container -->
      </section>
      <!-- /.sixsteps -->
+     <div class="block_two">
      <section id="team" class="section team">
       <div class="container">
         <div class="section-title team__section-title">
@@ -1264,6 +1270,8 @@
       <!-- /.containet -->
     </section>
     <!-- /.section client -->
+    </div>
+    <!-- /."block_two -->
    </main>
    <footer id="contacts" class="footer section--dark">
      <div class="container footer__container">
@@ -1388,7 +1396,7 @@
    <script src="https://api-maps.yandex.ru/2.1/?apikey=282a492c-110d-422a-9223-a8e012e9fd30&lang=ru_RU" type="text/javascript">
    </script>
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+   <script src="js/swiper.min.js"></script>
    <script src="js/wow.min.js"></script>
    <script src="js/jquery.validate.min.js"></script>
    <script src="js/jquery.mask.min.js"></script>

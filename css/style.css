@@ -567,6 +567,20 @@ img {
         background-color: #e3b873;
         margin: 0 10px; }
 
+.block_one {
+  background-image: url("../img/bg-line-block1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.block_two {
+  background-image: url("../img/bg-line-block3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
 @-webkit-keyframes animationMoneybox {
   0%, 50%, 100% {
     transform: rotate(0deg); }
@@ -740,7 +754,26 @@ img {
 
 .projects {
   padding-bottom: 29rem;
-  padding-top: 9.1em; }
+  padding-top: 9.1em;
+  background-color: #131313;
+  background-image: url("../img/bgline-project.png");
+  background-position: center, left bottom;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: relative; }
+  .projects:after {
+    content: "";
+    background-image: url("../img/bg-project-left.png"), url("../img/bg-project-right.png");
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1; }
   .projects__section-title {
     margin-bottom: 3.3rem; }
     .projects__section-title__heading {
@@ -969,7 +1002,7 @@ img {
     background-color: #131313;
     position: relative;
     max-width: 36rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
+    background: #131313 url("../img/bg-lines.png") no-repeat center;
     padding: 1.9rem 3.5rem 1.98rem;
     color: #fff; }
   .measurement__form__title {
@@ -1188,7 +1221,13 @@ img {
 
 .sixsteps {
   padding-top: 35rem;
-  padding-bottom: 36rem; }
+  padding-bottom: 36rem;
+  background-color: #131313;
+  background-image: url("../img/bg-line-block2.png");
+  background-position: center, left bottom;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+  object-fit: cover; }
   .sixsteps__col-35 {
     margin-top: -5.7rem; }
   .sixsteps__section-title__text {
@@ -1387,8 +1426,21 @@ img {
         font-weight: normal; }
 
 .client {
-  padding-bottom: 19rem;
-  margin-bottom: 8.5rem; }
+  padding-bottom: 27.5rem;
+  position: relative; }
+  .client::after {
+    content: "";
+    background-image: url("../img/bg-project-left.png"), url("../img/bg-project-right.png");
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1; }
   .client__row {
     display: flex;
     justify-content: space-between;
@@ -1466,9 +1518,15 @@ img {
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
-  padding-top: 3rem; }
+  padding-top: 3rem;
+  position: relative; }
   .footer__wrap {
     background-color: #181818;
+    background-image: url("../img/bgline-footer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    -o-object-fit: cover;
+    object-fit: cover;
     max-width: 63.07rem;
     margin: auto;
     margin-bottom: 3.5rem;
@@ -1576,7 +1634,7 @@ img {
   .modal-thanks__dialog {
     position: relative;
     max-width: 36.36rem;
-    background: #181818 url("../img/bg-lines.svg") no-repeat center;
+    background: #181818 url("../img/bg-lines.png") no-repeat center;
     padding: 2.4rem 3.5rem 1.98rem;
     color: #fff; }
   .modal-thanks__close {
@@ -1627,7 +1685,7 @@ img {
   .modal__dialog {
     position: relative;
     max-width: 36.36rem;
-    background: #181818 url("../img/bg-lines.svg") no-repeat center;
+    background: #181818 url("../img/bg-lines.png") no-repeat center;
     padding: 2.4rem 3.5rem 1.98rem;
     color: #fff; }
   .modal__close {
@@ -1758,6 +1816,8 @@ img {
     margin-left: -6rem; } }
 
 @media screen and (max-width: 991px) {
+  .block_one, .block_two {
+    background-image: none; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -1777,7 +1837,10 @@ img {
     display: none; }
   .projects {
     padding-bottom: 0;
-    padding-top: 0; }
+    padding-top: 0;
+    background: #131313; }
+    .projects::after {
+      background-image: none; }
     .projects__swiper-slide__wrap {
       width: 95%;
       margin-bottom: 2rem; }
@@ -1931,7 +1994,8 @@ img {
       display: none; }
     .footer__wrap {
       margin-top: -12rem;
-      background-color: #131313; } }
+      background-color: #131313;
+      background-image: none; } }
 
 @media screen and (max-width: 576px) {
   .section {

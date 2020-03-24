@@ -112,6 +112,8 @@
         margin-left: -6rem                   
 
 @media screen and ( max-width: 991px)
+  .block_one, .block_two
+    background-image: none
   .row
     flex-direction: column
     align-items: center
@@ -136,6 +138,9 @@
   .projects //ЗАВЕРШЕННЫЕ ПРОЕКТЫ
     padding-bottom: 0
     padding-top: 0
+    background: $dark
+    &::after
+      background-image: none
     &__swiper-slide
       &__wrap  
         width: 95%   
@@ -295,6 +300,7 @@
     &__wrap
       margin-top: -12rem
       background-color: $dark
+      background-image: none
       
  
   
