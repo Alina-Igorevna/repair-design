@@ -87,6 +87,15 @@
         margin-top: -2rem
         margin-left: -3.5rem      
 
+@media screen and ( max-width: 1060px)
+  .measurement
+    &__form-wrap
+      margin-left: 1rem
+    &__service
+      &-wrap
+        margin-left: -4.7rem
+
+
 @media screen and ( max-width: 1050px)
   .measurement
     &__service
@@ -95,14 +104,36 @@
       &-three  
         transform: translate(36.6rem, 26.5rem)
       &-four  
-        transform: translate(32rem, 36rem)    
+        transform: translate(32rem, 36rem)  
+  .team__col-22
+    &--left        
+      margin-left: 0
+    &--right
+      margin-right: 0     
 
 @media screen and ( max-width: 1030px)
+  .service__text
+    font-size: 1.2rem
   .measurement
     &__service
       &-wrap
         margin-top: -3rem
-        margin-left: -5rem      
+        margin-left: -5rem    
+
+@media screen and ( max-width: 1010px)
+ .measurement
+    &__service
+      &-wrap
+        margin-left: -5.9rem  
+
+@media screen and ( max-width: 1000px)  
+  .service__text
+    font-size: 1.1rem
+    max-width: 24rem
+  .measurement
+    &__form-wrap
+      margin-left:  0
+
 
 @media screen and ( max-width: 992px)
   .measurement
@@ -230,6 +261,8 @@
     padding: 0
     &__col-40
       width: 100%
+    &__col-60
+      width: 340px  
     &__container
       position: absolute
       margin-top: -15rem  
@@ -394,20 +427,7 @@
        padding: 1.1rem 2.5rem
       &--design 
        padding: 1rem 3.9rem 1rem 3.5rem
-  .fantasy //РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ  
-    &__col-60
-      width: 100%
-    &__section-title  
-      margin-top: 0
-      margin-bottom: 2.4rem
-    &__swiper
-      &-button
-        &__wrap
-          margin-top: -13.5rem
-          margin-left: -3rem
-      &-container-mobil
-        &__image 
-          width: 28.33rem  
+ 
   .design //ДИЗАЙН ПРОЕКТ
     margin-bottom: 0
     padding-top: 14rem
@@ -468,7 +488,7 @@
       display: flex
       flex-direction: column
     &__title
-      font-size: 1.6rem
+      font-size: 1.66rem
       margin-bottom: 4.5rem
     &__wrap
       margin-top: 0
@@ -504,17 +524,37 @@
     order: 5
     &__title
       font-size: 1.5rem
+      line-height: 1.4
+      &:hover
+        color: $primary
     &__icon
-     margin-right: 1.7rem  
+     margin-right: 0.9rem  
      width: 39px
      height: 39px
+     margin-top: 1.8rem
+     &:hover
+        color: $primary
      & img
-       width: 16px
-       height: 16px
+       width: 20px
+       height: 20px
   .policy__label--center
     justify-content: start     
     
-   
+@media screen and ( max-width: 375px)
+  .fantasy //РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ  
+    &__col-60
+      width: 100%
+    &__section-title  
+      margin-top: 0
+      margin-bottom: 2.4rem
+    &__swiper
+      &-button
+        &__wrap
+          margin-top: -13.5rem
+          margin-left: -3rem
+      &-container-mobil
+        &__image 
+          width: 28.33rem     
         
 @media screen and ( max-width: 320px)    
   .team
@@ -541,6 +581,10 @@
     &__sсroll-down
       display: none
 
+@media screen and ( max-height: 400px)
+  .modal
+    overflow: scroll
+
 @media screen and ( max-height: 375px)
   .col-22
     width: 100%
@@ -549,6 +593,20 @@
       &__icon 
        margin-left: -0.1rem
        margin-top: -2.7rem  
+  .fantasy //РЕАЛИЗУЕМ ВАШИ ФАНТАЗИИ  
+    &__col-60
+      width: 100%
+    &__section-title  
+      margin-top: 0
+      margin-bottom: 2.4rem
+    &__swiper
+      &-button
+        &__wrap
+          margin-top: -13.5rem
+          margin-left: -3rem
+      &-container-mobil
+        &__image 
+          width: 28.33rem       
   
 
 

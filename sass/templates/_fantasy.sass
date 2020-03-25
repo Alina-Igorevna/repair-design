@@ -11,21 +11,27 @@
   &__item
     list-style-type: none
     font-size: 1.6rem
-    line-height: 2.2
+    line-height: 2.1
     cursor: pointer
     &:hover
       color: $primary
   &__item
-    &--active 
+    & span 
+      font-family: 'Futura', sans-serif
+      font-size: 1.61rem
+    &--active, &:hover 
       color: $primary
-      &::after
-        content: ''
-        display: block
-        position: absolute
-        width: 10rem
-        height: 1px
-        margin-top: -0.8rem
-        background-color: #e3b873
+      & span
+        position: relative
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          width: 60%
+          height: 1px
+          margin-top: -0.8rem
+          background-color: #e3b873
+      
     &-wrap   
   &__photo
     &-wrap
@@ -41,6 +47,11 @@
     &-slide
       &-mobil
         visibility: hidden
+        width: 100%
+        // display: flex
+        // justify-content: center
+        // position: relative
+        // flex-direction: column
     &-container
       &-wrap
         margin-top: -13rem
@@ -59,19 +70,22 @@
         position: absolute
         z-index: 97
         margin-top: -13rem
-        margin-left: 4rem
-        width: 30rem
+        // margin-left: 4rem
+        width: 100%
       &-prev, &-next  
         width: 36px
         border-radius: 50%
         height: 36px
-        margin-left: 4rem
+        // margin-left: 4rem
         margin-top: 2rem     
       &-prev
         background: $primary url(../img/fantasy_arrow.svg) no-repeat center
         transform: rotate(180deg)
+        margin-left: 1rem
       &-next
         background: $primary url(../img/fantasy_arrow.svg) no-repeat center
+        margin-right: 1rem
+        
            
      
 

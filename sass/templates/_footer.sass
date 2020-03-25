@@ -1,5 +1,5 @@
 .footer
-  background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
+  background: $bgmodal url('../img/footer-bg.png') no-repeat center / cover
   padding-top: 3rem
   position: relative
   &__wrap
@@ -28,16 +28,17 @@
     margin: auto
   &__input
     padding: 0  
+    padding-bottom: 0.4rem
     &::placeholder
       font-family: 'Futura Book', cursive
   &__input-group
     display: flex
     flex-direction: column
     flex-basis: 45%  
-    margin-bottom: 4rem
+    margin-bottom: 3.6rem
     &-full-width
       flex-basis: 100% 
-      margin-bottom: 3.8rem
+      margin-bottom: 3.5rem
   &__policy    
     flex-basis: 100% 
     margin-bottom: 3.5rem
@@ -80,11 +81,14 @@
       display: flex
       justify-content: center
       margin-bottom: 3rem
+      margin-top: 1.5rem
   &__title    
     font-size: 1.42rem
     text-align: center
     line-height: 1.5
     margin-bottom: 1.5rem
-    text-decoration: none
-    &:hover
-      color: $darkprimary
+    & a
+     color: $primary
+     text-decoration: none
+     &:hover
+       color: $darkprimary

@@ -40,6 +40,7 @@
   border: none
   font-size: 1.285rem
   padding: 0.5rem 0
+  outline: none
   &--dark
     border-bottom: 1px solid rgba(54, 54, 54, 0.3)
     color: $gray
@@ -112,6 +113,12 @@
     color: tomato
     position: absolute
     margin-top: 4rem
+  &-control, &-footer  
+    & div
+      &.invalid 
+        color: tomato
+        position: absolute
+        margin-top: 3.1rem
 input
   &.invalid
     border-bottom: 1px solid tomato  
@@ -122,12 +129,14 @@ input
     color: tomato
     position: absolute
     margin-top: 1.5rem
+    font-size: 1rem
 .policy-invalid--center 
   & div
    &.invalid   
     color: tomato
     position: absolute
     margin-top: 1.5rem
+    font-size: 1rem
    
   
 
